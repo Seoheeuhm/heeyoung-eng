@@ -131,6 +131,7 @@ address { font-style:normal; }
 .mob-filter-btn { display:none; }
 .mob-filter-bar { display:none; }
 .mob-filter-close { display:none; }
+.mob-filter-apply { display:none; }
 
 /* Info card */
 .info-list { display:flex; flex-direction:column; gap:10px; margin-bottom:12px; }
@@ -594,6 +595,7 @@ address { font-style:normal; }
   .pb-stats { display:none; }
   .rotary-cat-grid { grid-template-columns:1fr; }
   .sidebar,.prod-cat-grid { display:grid; grid-template-columns:1fr 1fr; }
+  .prod-page > .sidebar { display:flex; flex-direction:column; grid-template-columns:unset; }
   .prod-prev-grid { grid-template-columns:1fr 1fr; }
   .cl-grid { grid-template-columns:repeat(3,1fr); }
   .ct-info-grid { grid-template-columns:1fr; }
@@ -635,10 +637,13 @@ address { font-style:normal; }
   .mob-filter-btn { display:inline-flex; align-items:center; gap:5px; padding:6px 14px; background:var(--blue); color:#fff; border:none; border-radius:20px; font-size:.82rem; font-weight:700; font-family:var(--font); cursor:pointer; }
   .mob-filter-close { display:flex; align-items:center; gap:6px; background:#fff; border:1px solid var(--g3); color:var(--text); font-size:.88rem; font-weight:700; font-family:var(--font); padding:8px 14px; border-radius:var(--r); cursor:pointer; margin-bottom:14px; position:sticky; top:0; z-index:1; width:fit-content; }
   .prod-page { display:flex !important; flex-direction:column !important; }
-  .prod-page > .sidebar { order:2; display:flex !important; flex-direction:column; }
-  .prod-page > .prod-left { order:1; }
+  .prod-page > .sidebar { order:2; display:flex !important; flex-direction:column; width:100%; }
+  .prod-page > .sidebar .sb-box { width:100%; }
+  .prod-page > .prod-left { order:1; width:100%; }
   .sb-filter { display:none !important; }
   .sb-filter.mob-open { display:block !important; position:fixed; top:0; left:0; right:0; bottom:0; z-index:850; background:#fff; overflow-y:auto; padding:16px; }
+  .mob-filter-apply { display:flex; align-items:center; justify-content:center; position:fixed; bottom:0; left:0; right:0; padding:14px; background:var(--blue); color:#fff; border:none; font-size:.95rem; font-weight:700; font-family:var(--font); cursor:pointer; z-index:860; box-shadow:0 -2px 8px rgba(0,0,0,.15); }
+  .sb-filter.mob-open { padding-bottom:60px; }
 }
 @media (max-width:480px) {
   .sl-btns { flex-direction:column; }

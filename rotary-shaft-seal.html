@@ -1213,6 +1213,7 @@
             </div>
           </div>
           <button class="filter-reset" id="shaft-filter-reset">필터 초기화</button>
+          <button class="mob-filter-apply" id="mob-filter-apply">적용하기</button>
         </div>
       </div>
     </aside>
@@ -1377,6 +1378,7 @@
   }
   mobBtn?.addEventListener('click', () => openFilter(!filterBox?.classList.contains('mob-open')));
   closeBtn?.addEventListener('click', () => openFilter(false));
+  document.getElementById('mob-filter-apply')?.addEventListener('click', () => openFilter(false));
 })();
 </script>
 </body>

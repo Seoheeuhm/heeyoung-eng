@@ -12,8 +12,10 @@
 <div id="header-placeholder"></div>
 <div class="page-content">
   <div class="prod-page">
-    <button class="mob-filter-btn" id="mob-filter-btn">필터 열기 ▼</button>
     <div class="prod-left">
+      <div class="mob-filter-bar">
+        <button class="mob-filter-btn" id="mob-filter-btn">≡ 필터</button>
+      </div>
       <div class="preview-box">
         <div class="pb-head"><h3>로터 씰</h3></div>
         <div class="pb-body">
@@ -161,7 +163,8 @@
       </div>
     </div>
     <aside class="sidebar">
-      <div class="sb-box">
+      <div class="sb-box sb-filter">
+        <button class="mob-filter-close" id="mob-filter-close">✕ 닫기</button>
         <div class="sb-head">≡ 필터 기준</div>
         <div class="sb-body">
           <div class="filter-tag-bar" id="rotor-tag-bar">선택한 필터 없음</div>
@@ -324,13 +327,14 @@
   });
 
   const mobBtn = document.getElementById('mob-filter-btn');
-  if (mobBtn) {
-    mobBtn.addEventListener('click', function() {
-      const sidebar = document.querySelector('.prod-page > .sidebar');
-      const open = sidebar.classList.toggle('mob-open');
-      this.textContent = open ? '필터 닫기 ▲' : '필터 열기 ▼';
-    });
+  const filterBox = document.querySelector('.sb-filter');
+  const closeBtn = document.getElementById('mob-filter-close');
+  function openFilter(open) {
+    filterBox?.classList.toggle('mob-open', open);
+    if (mobBtn) mobBtn.textContent = open ? '≡ 필터 닫기' : '≡ 필터';
   }
+  mobBtn?.addEventListener('click', () => openFilter(!filterBox?.classList.contains('mob-open')));
+  closeBtn?.addEventListener('click', () => openFilter(false));
 })();
 </script>
 </body>

@@ -78,7 +78,7 @@ address { font-style:normal; }
 .hamburger.open span:nth-child(2){ opacity:0; }
 .hamburger.open span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
 .mob-nav { background:var(--blue-dd); max-height:0; overflow:hidden; transition:max-height .3s ease; }
-.mob-nav.open { max-height:260px; }
+.mob-nav.open { max-height:400px; }
 .mob-nav ul { padding:6px 0 14px; }
 .mob-nav li a { display:block; padding:11px 22px; font-size:.9rem; font-weight:600; color:rgba(255,255,255,.85); border-bottom:1px solid rgba(255,255,255,.07); }
 .mob-nav li a:hover { color:var(--accent); }
@@ -128,6 +128,7 @@ address { font-style:normal; }
 .filter-tab { flex:1; padding:5px 6px; font-size:.78rem; font-weight:600; background:#fff; border:none; cursor:pointer; color:#666; transition:background .15s,color .15s; }
 .filter-tab.active { background:#f07820; color:#fff; }
 .filter-show-more { font-size:.77rem; color:var(--blue); cursor:pointer; text-decoration:none; margin-top:6px; background:none; border:none; padding:0; display:inline-block; }
+.mob-filter-btn { display:none; }
 
 /* Info card */
 .info-list { display:flex; flex-direction:column; gap:10px; margin-bottom:12px; }
@@ -608,7 +609,7 @@ address { font-style:normal; }
   .util-links { display:none; }
   .gnb-list,.gnb-sub { display:none !important; }
   .hamburger { display:flex; }
-  .slider-wrap { height:360px; }
+  .slider-wrap { height:240px; }
   .sl-txt h2 { font-size:1.5rem; }
   .home-main { padding:18px 12px 26px; }
   .home-section-head { align-items:flex-start; flex-direction:column; gap:4px; }
@@ -628,6 +629,11 @@ address { font-style:normal; }
   #quick { display:none; }
   .go-top { right:12px; }
   .ft-inner { grid-template-columns:1fr; gap:18px; }
+  .mob-filter-btn { display:flex; align-items:center; justify-content:center; gap:6px; width:100%; padding:10px 16px; background:var(--blue); color:#fff; border:none; cursor:pointer; font-size:.88rem; font-weight:700; font-family:var(--font); order:-1; border-radius:var(--r); margin-bottom:8px; }
+  .prod-page { display:flex !important; flex-direction:column !important; }
+  .prod-page > .sidebar { order:0; display:none !important; margin-bottom:8px; }
+  .prod-page > .sidebar.mob-open { display:flex !important; flex-direction:column; }
+  .prod-page > .prod-left { order:1; }
 }
 @media (max-width:480px) {
   .sl-btns { flex-direction:column; }

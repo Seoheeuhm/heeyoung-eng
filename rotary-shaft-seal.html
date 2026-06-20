@@ -12,6 +12,7 @@
 <div id="header-placeholder"></div>
 <div class="page-content">
   <div class="prod-page">
+    <button class="mob-filter-btn" id="mob-filter-btn">필터 열기 ▼</button>
     <div class="prod-left">
       <div class="preview-box">
         <div class="pb-head"><h3>회전형 샤프트 씰</h3></div>
@@ -1363,6 +1364,15 @@
     checks.forEach(check => check.checked = false);
     applyFilters();
   });
+
+  const mobBtn = document.getElementById('mob-filter-btn');
+  if (mobBtn) {
+    mobBtn.addEventListener('click', function() {
+      const sidebar = document.querySelector('.prod-page > .sidebar');
+      const open = sidebar.classList.toggle('mob-open');
+      this.textContent = open ? '필터 닫기 ▲' : '필터 열기 ▼';
+    });
+  }
 })();
 </script>
 </body>

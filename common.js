@@ -26,7 +26,6 @@ function headerHTML(cur) {
       <div class="sl-mark">
         <span class="sl-h">H</span>
         <span class="sl-y-box">
-          <!-- 타원: Y 중심, -25deg, H-Y 사이 선 끊김(stroke-dasharray) -->
           <svg class="sl-oval-svg" viewBox="0 0 100 58" fill="none" xmlns="http://www.w3.org/2000/svg">
             <ellipse cx="61" cy="37" rx="56" ry="31" stroke="#f07820" stroke-width="5.5" fill="none"
               stroke-dasharray="151 54 74"/>
@@ -36,12 +35,18 @@ function headerHTML(cur) {
       </div>
       <span class="sl-name">희영이엔지</span>
     </a></h1>
+    <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+      <span></span><span></span><span></span>
+    </button>
   </div>
   <nav id="gnb">
     <div class="gnb-inner">
       <ul class="gnb-list">${items}</ul>
     </div>
   </nav>
+  <div class="mob-nav" id="mobNav">
+    <ul>${items}</ul>
+  </div>
 </div>`;
 }
 

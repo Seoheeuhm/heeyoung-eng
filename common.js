@@ -74,7 +74,7 @@ function footerHTML() {
         <p class="ft-slogan">Parker Hannifin Korea 공인 씰 전문 대리점</p>
       </div>
       <address class="ft-addr">
-        <li><b>주소</b> 서울시 금천구 시흥동 984번지 시흥유통상가 31동 249호</li>
+        <li><b>주소</b> 서울시 금천구 시흥대로 97 시흥유통상가 31-249</li>
         <li><b>사업자번호</b> 119-86-56059</li>
         <li><b>TEL</b> 02-6337-0128 &nbsp;|&nbsp; <b>FAX</b> 02-6269-0128 &nbsp;|&nbsp; <b>H.P</b> 010-4594-8037</li>
         <li><b>E-MAIL</b> ${EMAIL}</li>

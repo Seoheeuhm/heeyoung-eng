@@ -16,13 +16,13 @@ const PRODS = [
 function headerHTML(cur) {
   const items = PRODS.map(p => {
     const on = (cur === p.href) ? ' cur' : '';
-    return `<li class="gnb-item${on}"><a href="${p.href}">${p.label}</a></li>`;
+    return `<li class="gnb-item${on}"><a href="/${p.href}">${p.label}</a></li>`;
   }).join('');
 
   return `
 <div id="header">
   <div class="hdt">
-    <h1><a href="index.html" class="site-logo">
+    <${cur==='home'?'div':'h1'}><a href="/" class="site-logo">
       <div class="sl-mark">
         <span class="sl-h">H</span>
         <span class="sl-y-box">
@@ -34,7 +34,7 @@ function headerHTML(cur) {
         </span>
       </div>
       <span class="sl-name">희영이엔지</span>
-    </a></h1>
+    </a></${cur==='home'?'div':'h1'}>
     <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
       <span></span><span></span><span></span>
     </button>
@@ -54,13 +54,13 @@ function headerHTML(cur) {
 function prodSubNavHTML(curHref) {
   const links = PRODS.map(p => {
     const on = p.href === curHref ? ' class="on"' : '';
-    return `<a href="${p.href}"${on}>${p.label}</a>`;
+    return `<a href="/${p.href}"${on}>${p.label}</a>`;
   }).join('');
   return `
 <div class="sub-nav-bar">
   <div class="sub-nav-inner">
-    <a href="index.html">홈</a><span class="sep">›</span>
-    <a href="oring.html">제품소개</a><span class="sep">›</span>
+    <a href="/">홈</a><span class="sep">›</span>
+    <a href="/oring.html">제품소개</a><span class="sep">›</span>
     ${links}
   </div>
 </div>`;
@@ -86,7 +86,13 @@ function footerHTML() {
       </address>
       <nav class="ft-nav">
         <ul>
-          ${PRODS.map(p=>`<li><a href="${p.href}">${p.label}</a></li>`).join('')}
+          ${PRODS.map(p=>`<li><a href="/${p.href}">${p.label}</a></li>`).join('')}
+        </ul>
+        <ul style="margin-top:10px;border-top:1px solid rgba(255,255,255,.15);padding-top:10px;">
+          <li><a href="/o-ring/">오링 가이드</a></li>
+          <li><a href="/rotary-seal/">회전형씰 가이드</a></li>
+          <li><a href="/hydraulic-seal/">유압·공압씰</a></li>
+          <li><a href="/parker-seal/">파카 대리점 안내</a></li>
         </ul>
       </nav>
     </div>

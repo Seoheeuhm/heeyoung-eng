@@ -216,8 +216,8 @@ address { font-style:normal; }
 .s3 .sl-bg { background:linear-gradient(130deg,#091525 0%,#0e2244 40%,#142e62 100%); }
 .sl-txt { position:relative; z-index:2; max-width:580px; padding:0 20px; }
 .sl-tag { display:inline-block; font-size:.7rem; font-weight:700; letter-spacing:.13em; color:var(--accent); background:rgba(224,90,16,.1); border:1px solid rgba(224,90,16,.3); padding:3px 12px; border-radius:100px; margin-bottom:16px; text-transform:uppercase; }
-.sl-txt h2 { font-size:clamp(1.7rem,4vw,2.6rem); font-weight:700; color:rgba(255,255,255,.85); line-height:1.25; margin-bottom:12px; letter-spacing:-.02em; }
-.sl-txt h2 strong { color:#fff; display:block; font-weight:900; }
+.sl-txt h1,.sl-txt h2 { font-size:clamp(1.7rem,4vw,2.6rem); font-weight:700; color:rgba(255,255,255,.85); line-height:1.25; margin-bottom:12px; letter-spacing:-.02em; }
+.sl-txt h1 strong,.sl-txt h2 strong { color:#fff; display:block; font-weight:900; }
 .sl-desc { font-size:.92rem; color:rgba(255,255,255,.58); margin-bottom:26px; line-height:1.75; }
 .sl-desc em { color:#f5a030; font-style:normal; font-weight:700; }
 .sl-btns { display:flex; gap:10px; flex-wrap:wrap; }
@@ -645,6 +645,47 @@ address { font-style:normal; }
   .mob-filter-apply { display:flex; align-items:center; justify-content:center; position:fixed; bottom:0; left:0; right:0; padding:14px; background:var(--blue); color:#fff; border:none; font-size:.95rem; font-weight:700; font-family:var(--font); cursor:pointer; z-index:860; box-shadow:0 -2px 8px rgba(0,0,0,.15); }
   .sb-filter.mob-open { padding-bottom:60px; }
 }
+/* ============================================================
+   HOME — SEO LINKS + FAQ
+   ============================================================ */
+.home-seo-links { max-width:var(--max); margin:18px auto 0; }
+.home-seo-links > h2 { font-size:.72rem; font-weight:700; color:var(--g4); letter-spacing:.08em; text-transform:uppercase; margin-bottom:8px; }
+.home-seo-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+.home-seo-card { background:#fff; border:1px solid #c8d4dc; border-radius:var(--r2); padding:14px 16px; display:flex; flex-direction:column; gap:5px; transition:border-color var(--t),box-shadow var(--t); }
+.home-seo-card:hover { border-color:var(--blue); box-shadow:0 3px 12px rgba(33,113,184,.12); }
+.home-seo-card strong { font-size:.84rem; font-weight:700; color:#183a5f; }
+.home-seo-card span { font-size:.75rem; color:#667386; line-height:1.45; }
+.home-faq { max-width:var(--max); margin:18px auto 0; background:#fff; border:1px solid #d7e0e6; padding:22px; }
+.home-faq > h2 { color:#183a5f; font-size:1rem; font-weight:900; margin-bottom:16px; padding-bottom:10px; border-bottom:2px solid var(--blue); }
+.faq-item { padding:14px 0; border-top:1px solid #dce4ea; }
+.faq-item:first-of-type { border-top:none; padding-top:0; }
+.faq-q { font-size:.88rem; font-weight:700; color:var(--blue-d); margin-bottom:6px; }
+.faq-q::before { content:'Q. '; color:var(--accent); }
+.faq-a { font-size:.83rem; color:var(--g5); line-height:1.85; }
+.faq-a::before { content:'A. '; color:var(--blue); font-weight:700; }
+
+/* ============================================================
+   LANDING PAGES
+   ============================================================ */
+.lp-h1 { font-size:1.45rem; font-weight:900; color:#183a5f; margin:0 0 16px; padding-bottom:12px; border-bottom:3px solid var(--accent); }
+.lp-compare-table { width:100%; border-collapse:collapse; font-size:.82rem; margin:10px 0; }
+.lp-compare-table th,.lp-compare-table td { padding:8px 12px; border:1px solid var(--g2); text-align:left; }
+.lp-compare-table thead th { background:var(--blue); color:#fff; font-weight:600; }
+.lp-compare-table td { color:var(--g5); }
+.lp-compare-table tr:nth-child(even) td { background:var(--g1); }
+.lp-cta-box { background:var(--blue-dd); border-radius:var(--r2); padding:22px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+.lp-cta-btns { display:flex; gap:10px; flex-wrap:wrap; }
+.lp-cta-btns .btn-tel { display:inline-flex; align-items:center; justify-content:center; padding:10px 22px; border-radius:var(--r); font-weight:700; font-size:.86rem; background:var(--accent); color:#fff; transition:background var(--t); }
+.lp-cta-btns .btn-tel:hover { background:#c44a08; }
+.lp-cta-btns .btn-mail { display:inline-flex; align-items:center; justify-content:center; padding:10px 22px; border-radius:var(--r); font-weight:700; font-size:.86rem; background:rgba(255,255,255,.12); color:#fff; border:1px solid rgba(255,255,255,.35); transition:all var(--t); }
+.lp-cta-btns .btn-mail:hover { background:#fff; color:var(--blue-d); }
+.lp-home-link { display:inline-flex; align-items:center; gap:5px; font-size:.82rem; color:var(--blue); font-weight:600; margin-top:8px; }
+.lp-home-link:hover { color:var(--accent); }
+
+@media (max-width:700px) {
+  .home-seo-grid { grid-template-columns:1fr 1fr; }
+}
+
 @media (max-width:480px) {
   .sl-btns { flex-direction:column; }
   .btn { justify-content:center; }

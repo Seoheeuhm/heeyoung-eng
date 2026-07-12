@@ -1,6 +1,6 @@
 'use strict';
 
-const EMAIL = 'hyeng128@naver.com';
+const EMAIL = 'info@hy-eng.co.kr';
 
 /* GNB 제품 카테고리 (anyseal.kr 방식 — 제품만) */
 const PRODS = [
@@ -99,7 +99,7 @@ function footerHTML() {
   </div>
 </div>
 <div id="quick"><ul>
-  <li><a href="mailto:hyeng@naver.com">이메일<br>상담</a></li>
+  <li><a href="mailto:info@hy-eng.co.kr">이메일<br>상담</a></li>
   <li class="q-tel"><a href="tel:02-6337-0128">전화<br>상담</a></li>
 </ul></div>
 <button class="go-top" id="goTop">▲</button>`;

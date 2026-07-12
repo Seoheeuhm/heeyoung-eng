@@ -205,7 +205,7 @@ address { font-style:normal; }
 /* ============================================================
    HOME — SLIDER
    ============================================================ */
-.slider-wrap { position:relative; height:480px; overflow:hidden; }
+.slider-wrap { position:relative; height:400px; overflow:hidden; }
 .slide { position:absolute; inset:0; opacity:0; transition:opacity .65s ease; display:flex; align-items:center; }
 .slide.active { opacity:1; z-index:1; }
 .sl-bg { position:absolute; inset:0; background-size:cover; background-position:center; background-repeat:no-repeat; }
@@ -613,8 +613,8 @@ address { font-style:normal; }
   .util-links { display:none; }
   .gnb-list,.gnb-sub { display:none !important; }
   .hamburger { display:flex; }
-  .slider-wrap { height:290px; }
-  .sl-txt h2 { font-size:1.5rem; }
+  .slider-wrap { height:240px; }
+  .sl-txt h1,.sl-txt h2 { font-size:1.5rem; }
   .home-main { padding:18px 12px 26px; }
   .home-section-head { align-items:flex-start; flex-direction:column; gap:4px; }
   .home-company-copy { align-items:flex-start; flex-direction:column; }

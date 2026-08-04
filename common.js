@@ -11,6 +11,7 @@ const PRODS = [
   { label:'백업 링',   href:'backup.html'},
   { label:'와이퍼',    href:'wiper.html' },
   { label:'버퍼 씰',  href:'buffer.html'},
+  { label:'호스',     href:'hose.html' },
 ];
 
 function headerHTML(cur) {

@@ -12,6 +12,7 @@ const PRODS = [
   { label:'와이퍼',    href:'wiper.html' },
   { label:'버퍼 씰',  href:'buffer.html'},
   { label:'호스',     href:'hose.html' },
+  { label:'기타',     href:'etc.html' },
 ];
 
 function headerHTML(cur) {

@@ -632,8 +632,12 @@ address { font-style:normal; }
   .util-links { display:none; }
   .gnb-list,.gnb-sub { display:none !important; }
   .hamburger { display:flex; }
-  .slider-wrap { height:240px; margin-top:5px; }
-  .sl-txt h1,.sl-txt h2 { font-size:1.5rem; }
+  .slider-wrap { height:270px; margin-top:5px; }
+  .sl-txt { padding:0 16px; }
+  .sl-tag { margin-bottom:10px; }
+  .sl-txt h1,.sl-txt h2 { font-size:1.35rem; margin-bottom:8px; }
+  .sl-desc { margin-bottom:14px; line-height:1.55; }
+  .sl-trust { margin-top:6px; gap:10px; }
   .home-main { padding:23px 12px 26px; }
   .home-section-head { align-items:flex-start; flex-direction:column; gap:4px; }
   .home-company-copy { align-items:flex-start; flex-direction:column; }

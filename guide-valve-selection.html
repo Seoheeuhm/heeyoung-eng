@@ -1,0 +1,284 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>유압·공압 밸브 선택 기준: 방향·압력·유량 제어 밸브 가이드 | 희영이엔지</title>
+  <meta name="description" content="파카(Parker) 유압 및 공압 밸브 선택 기준 완벽 가이드. 방향제어 솔레노이드 밸브, 압력제어 릴리프 밸브, 유량제어 스로틀 밸브 및 ISO 규격 선정법.">
+  <meta name="keywords" content="유압 밸브 선택 기준, 솔레노이드 밸브, 파카 밸브, 릴리프 밸브, 체크밸브, 공압 밸브, D1VW, 방향제어밸브">
+  <link rel="canonical" href="https://www.hy-eng.co.kr/guide-valve-selection.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">
+        <div class="logo-svg">
+          <div class="sl-mark">
+            <span class="sl-h">H</span>
+            <span class="sl-y-box">
+              <svg class="sl-oval-svg" viewBox="0 0 100 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="61" cy="37" rx="56" ry="31" stroke="#f07820" stroke-width="5.5" fill="none" stroke-dasharray="151 54 74"/>
+              </svg>
+              <span class="sl-y">Y</span>
+            </span>
+          </div>
+          <span class="sl-name">희영이엔지</span>
+        </div>
+      </a>
+      <nav class="header__nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">홈</a></li>
+          <li class="nav__dropdown">
+            <a href="products.html" class="nav__link">제품 <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown__menu">
+              <li><a href="products.html#orings">오링 (O-Ring)</a></li>
+              <li><a href="products.html#hydraulic-seals">유압씰</a></li>
+              <li><a href="products.html#pneumatic-seals">공압씰</a></li>
+              <li><a href="products.html#rotary-seals">회전형씰</a></li>
+              <li><a href="products.html#hose">호스</a></li>
+              <li><a href="products.html#valve">밸브</a></li>
+              <li><a href="products.html#cylinder">실린더</a></li>
+              <li><a href="products.html#pump">펌프</a></li>
+              <li><a href="products.html#filter">필터</a></li>
+            </ul>
+          </li>
+          <li class="nav__dropdown">
+            <a href="guide.html" class="nav__link active">기술 가이드 <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown__menu">
+              <li><a href="guide-oring-spec.html">오링 규격 확인법</a></li>
+              <li><a href="guide-material.html">NBR vs FKM 재질 비교</a></li>
+              <li><a href="guide-parker-pn.html">파카 품번 대체품 찾기</a></li>
+              <li><a href="guide-seal-type.html">씰 종류별 선택 기준</a></li>
+              <li><a href="guide-checklist.html">재질 선택 체크리스트</a></li>
+              <li><a href="guide-inquiry.html">문의 시 필요 정보</a></li>
+              <li><a href="guide-hose-selection.html">유압호스 선택 기준</a></li>
+              <li><a href="guide-valve-selection.html">밸브 선택 기준</a></li>
+              <li><a href="guide-cylinder-selection.html">실린더 선택 기준</a></li>
+              <li><a href="guide-pump-filter-selection.html">펌프·필터 선택 기준</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="nav__link">회사 소개</a></li>
+          <li><a href="contact.html" class="nav__link">견적·문의</a></li>
+        </ul>
+      </nav>
+      <div class="header__cta">
+        <a href="tel:02-6337-0128" class="btn btn--phone"><i class="fas fa-phone"></i> 02-6337-0128</a>
+        <a href="contact.html" class="btn btn--primary">빠른 견적</a>
+      </div>
+      <button class="header__hamburger" id="hamburger" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">홈</a> <span>›</span> <a href="guide.html">기술 가이드</a> <span>›</span> <span style="color:#fff">밸브 선택 기준</span>
+      </div>
+      <h1>유압·공압 밸브 선택 기준과 실무 가이드</h1>
+      <p>방향, 압력, 유량의 3대 제어 요소와 설치 규격에 맞춘 파카(Parker) 밸브 엔지니어링 가이드</p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <div class="content">
+    <div class="container">
+      <div class="content__inner">
+
+        <div class="info-box">
+          <h4>📌 핵심 요약</h4>
+          <p>밸브는 유공압 회로의 두뇌이자 스위치입니다. 올바른 밸브 선정을 위해서는 <strong>① 제어 목적(방향/압력/유량)</strong>, <strong>② 최대 허용 압력 및 유량(LPM)</strong>, <strong>③ 제어 전압(DC 24V / AC 220V 등)</strong>, <strong>④ 장착 표준(ISO 마운팅 인터페이스)</strong>을 순서대로 확인해야 합니다.</p>
+        </div>
+
+        <h2>1. 기능에 따른 3대 밸브 분류</h2>
+        
+        <h3>① 방향 제어 밸브 (Directional Control Valve)</h3>
+        <p>실린더의 전진/후진, 모터의 정/역회전 등 유체의 흐름 방향을 결정합니다.</p>
+        <ul>
+          <li><strong>솔레노이드 밸브 (Solenoid Valve):</strong> 전기 신호로 스풀을 동작시키는 전자식 밸브 (예: 파카 D1VW 시리즈)</li>
+          <li><strong>포트 및 위치 수(Ways/Positions):</strong> 4/2 Way, 4/3 Way(중립 센터 포지션: 올 블록, 탠덤, 플로팅 등)</li>
+          <li><strong>수동/기계식 레버 밸브:</strong> 특장차나 중장비용 수동 조작식 방향 전환 밸브</li>
+        </ul>
+
+        <h3>② 압력 제어 밸브 (Pressure Control Valve)</h3>
+        <p>회로 내의 최고 압력을 제한하거나 특정 라인의 압력을 일정하게 감압합니다.</p>
+        <ul>
+          <li><strong>릴리프 밸브 (Relief Valve):</strong> 설정 압력 이상이 되면 유체를 탱크로 바이패스하여 회로 및 펌프를 보호</li>
+          <li><strong>감압 밸브 (Reducing Valve):</strong> 메인 라인보다 낮은 2차측 압력을 일정하게 유지</li>
+          <li><strong>시퀀스 / 언로딩 밸브:</strong> 순차 작동 제어 및 펌프 무부하 운전 구현</li>
+        </ul>
+
+        <h3>③ 유량 제어 밸브 (Flow Control Valve)</h3>
+        <p>실린더의 작동 속도나 모터의 회전 속도를 정밀하게 조절합니다.</p>
+        <ul>
+          <li><strong>스로틀 체크 밸브:</strong> 한쪽 방향은 교축(조절)하고 반대 방향은 자유 흐름(Free Flow) 허용 (미터인 / 미터아웃 방식)</li>
+          <li><strong>압력/온도 보상형 유량제어 밸브:</strong> 부하 변동이나 유온 변화에도 일정한 작동 속도 유지</li>
+        </ul>
+
+        <h2>2. 밸브 선정 시 5단계 체크포인트</h2>
+        <div class="checklist-grid">
+          <div class="checklist-item">
+            <i class="fas fa-check-circle"></i>
+            <div>
+              <strong>1. 최대 유량 (LPM / GPM)</strong>
+              <span>밸브가 처리할 수 있는 최대 유량을 초과하면 과도한 압력 강하(ΔP)와 오일 가열이 발생합니다.</span>
+            </div>
+          </div>
+          <div class="checklist-item">
+            <i class="fas fa-check-circle"></i>
+            <div>
+              <strong>2. 시스템 상용 압력 (bar)</strong>
+              <span>일반 산업 유압(140~210 bar), 고압 프레스(315~350 bar), 공압(10 bar 이하) 등 사용 내압 등급 일치 여부.</span>
+            </div>
+          </div>
+          <div class="checklist-item">
+            <i class="fas fa-check-circle"></i>
+            <div>
+              <strong>3. 서브플레이트 체결 규격 (Mounting Standard)</strong>
+              <span>ISO 4401 규격 (NG6/CETOP 03, NG10/CETOP 05 등)을 확인하여 매니폴드 블록과 호환되는지 점검.</span>
+            </div>
+          </div>
+          <div class="checklist-item">
+            <i class="fas fa-check-circle"></i>
+            <div>
+              <strong>4. 솔레노이드 전기 사양</strong>
+              <span>제어반 전원: DC 24V, AC 110V, AC 220V / 커넥터 타입(DIN 43650, 앰프 커넥터, 서지 서프레서 내장형).</span>
+            </div>
+          </div>
+          <div class="checklist-item">
+            <i class="fas fa-check-circle"></i>
+            <div>
+              <strong>5. 유체 호환성 및 씰 재질</strong>
+              <span>일반 광유는 NBR 씰, 고온 및 합성유에는 FKM(바이톤) 씰 옵션 적용 필수.</span>
+            </div>
+          </div>
+        </div>
+
+        <h2>3. 파카(Parker) 대표 유압 밸브 라인업</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>시리즈</th>
+              <th>규격 (ISO 크기)</th>
+              <th>최대 유량</th>
+              <th>최대 압력</th>
+              <th>주요 용도</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>D1VW</strong></td>
+              <td>NG06 (CETOP 03 / NFPA D03)</td>
+              <td>최대 80 LPM</td>
+              <td>350 bar</td>
+              <td>표준 산업용 솔레노이드 방향제어 밸브</td>
+            </tr>
+            <tr>
+              <td><strong>D3W</strong></td>
+              <td>NG10 (CETOP 05 / NFPA D05)</td>
+              <td>최대 150 LPM</td>
+              <td>350 bar</td>
+              <td>중대형 유압 설비 메인 제어 밸브</td>
+            </tr>
+            <tr>
+              <td><strong>R4V / R6V</strong></td>
+              <td>서브플레이트 직결형</td>
+              <td>최대 300~600 LPM</td>
+              <td>350 bar</td>
+              <td>파일럿 작동식 고정밀 릴리프 밸브</td>
+            </tr>
+            <tr>
+              <td><strong>Colorflow® F</strong></td>
+              <td>인라인 배관형</td>
+              <td>규격별 상이</td>
+              <td>350 bar</td>
+              <td>색상 인디케이터가 장착된 유량조절 밸브</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="related-guide">
+          <div class="related-guide__text">
+            <h4>📦 관련 제품 페이지</h4>
+            <p>파카(Parker) 방향·압력·유량제어 밸브 라인업</p>
+          </div>
+          <a href="products.html#valve" class="btn btn--white btn--sm">밸브 제품 보러가기 →</a>
+        </div>
+
+        <div class="related-guide" style="margin-top:16px;">
+          <div class="related-guide__text">
+            <h4>📘 함께 보면 좋은 가이드</h4>
+            <p>파카 품번으로 대체품 찾는 순서 및 호환 모델 검토</p>
+          </div>
+          <a href="guide-parker-pn.html" class="btn btn--white btn--sm">대체품 찾기 가이드 →</a>
+        </div>
+
+        <!-- CTA -->
+        <div style="background:var(--primary-light); border-radius:12px; padding:32px; margin-top:40px; text-align:center;">
+          <h3 style="margin-top:0;">기존 사용 중인 밸브 교체나 호환품이 필요하신가요?</h3>
+          <p>밸브 명판 사진이나 모델 코드(예: D1VW020BNJW 등)를 알려주시면 정품 납기와 단가를 안내해 드립니다.</p>
+          <a href="contact.html" class="btn btn--primary" style="margin-top:12px;">
+            <i class="fas fa-paper-plane"></i> 밸브 견적 문의하기
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__info">
+          <div class="footer__logo"><span class="logo-hy">HY</span><span class="logo-eng">-ENG</span></div>
+          <p><strong>주식회사 희영이엔지</strong></p>
+          <p>파카하나핀코리아(Parker Hannifin) 공인 씰 전문 대리점</p>
+        </div>
+        <div class="footer__contact">
+          <h4>연락처</h4>
+          <ul>
+            <li><i class="fas fa-phone"></i> <a href="tel:02-6337-0128">02-6337-0128</a></li>
+            <li><i class="fas fa-mobile-alt"></i> <a href="tel:010-4594-8037">010-4594-8037</a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:info@hy-eng.co.kr">info@hy-eng.co.kr</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>기술 가이드</h4>
+          <ul>
+            <li><a href="guide-valve-selection.html">밸브 선택 기준</a></li>
+            <li><a href="guide-hose-selection.html">유압호스 선택 기준</a></li>
+            <li><a href="guide-oring-spec.html">오링 규격 확인법</a></li>
+            <li><a href="guide-material.html">NBR vs FKM 비교</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>제품</h4>
+          <ul>
+            <li><a href="products.html#valve">밸브</a></li>
+            <li><a href="products.html#hose">호스</a></li>
+            <li><a href="products.html#orings">오링</a></li>
+            <li><a href="products.html#hydraulic-seals">유압씰</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom"><p>&copy; 2024 주식회사 희영이엔지(HY-ENG). All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <div class="floating-cta">
+    <a href="tel:010-4594-8037" class="floating-btn floating-btn--phone"><i class="fas fa-phone"></i></a>
+    <a href="contact.html" class="floating-btn floating-btn--quote"><i class="fas fa-file-invoice"></i></a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

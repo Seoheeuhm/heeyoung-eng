@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>유압·공압 실린더 선택 기준: 추력 계산 및 구조별 선정법 | 희영이엔지</title>
+  <meta name="description" content="파카(Parker) 유압 및 공압 실린더 선택 기준 완벽 가이드. 실린더 추력 계산식, 보어(Bore) 및 로드경 선정, 타이로드 vs 밀타입 실린더 비교와 씰링 구조.">
+  <meta name="keywords" content="실린더 선택 기준, 유압 실린더 추력 계산, 파카 실린더, 공압 실린더 규격, 보어경, 스트로크, 타이로드 실린더">
+  <link rel="canonical" href="https://www.hy-eng.co.kr/guide-cylinder-selection.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">
+        <div class="logo-svg">
+          <div class="sl-mark">
+            <span class="sl-h">H</span>
+            <span class="sl-y-box">
+              <svg class="sl-oval-svg" viewBox="0 0 100 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="61" cy="37" rx="56" ry="31" stroke="#f07820" stroke-width="5.5" fill="none" stroke-dasharray="151 54 74"/>
+              </svg>
+              <span class="sl-y">Y</span>
+            </span>
+          </div>
+          <span class="sl-name">희영이엔지</span>
+        </div>
+      </a>
+      <nav class="header__nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">홈</a></li>
+          <li class="nav__dropdown">
+            <a href="products.html" class="nav__link">제품 <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown__menu">
+              <li><a href="products.html#orings">오링 (O-Ring)</a></li>
+              <li><a href="products.html#hydraulic-seals">유압씰</a></li>
+              <li><a href="products.html#pneumatic-seals">공압씰</a></li>
+              <li><a href="products.html#rotary-seals">회전형씰</a></li>
+              <li><a href="products.html#hose">호스</a></li>
+              <li><a href="products.html#valve">밸브</a></li>
+              <li><a href="products.html#cylinder">실린더</a></li>
+              <li><a href="products.html#pump">펌프</a></li>
+              <li><a href="products.html#filter">필터</a></li>
+            </ul>
+          </li>
+          <li class="nav__dropdown">
+            <a href="guide.html" class="nav__link active">기술 가이드 <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown__menu">
+              <li><a href="guide-oring-spec.html">오링 규격 확인법</a></li>
+              <li><a href="guide-material.html">NBR vs FKM 재질 비교</a></li>
+              <li><a href="guide-parker-pn.html">파카 품번 대체품 찾기</a></li>
+              <li><a href="guide-seal-type.html">씰 종류별 선택 기준</a></li>
+              <li><a href="guide-checklist.html">재질 선택 체크리스트</a></li>
+              <li><a href="guide-inquiry.html">문의 시 필요 정보</a></li>
+              <li><a href="guide-hose-selection.html">유압호스 선택 기준</a></li>
+              <li><a href="guide-valve-selection.html">밸브 선택 기준</a></li>
+              <li><a href="guide-cylinder-selection.html">실린더 선택 기준</a></li>
+              <li><a href="guide-pump-filter-selection.html">펌프·필터 선택 기준</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="nav__link">회사 소개</a></li>
+          <li><a href="contact.html" class="nav__link">견적·문의</a></li>
+        </ul>
+      </nav>
+      <div class="header__cta">
+        <a href="tel:02-6337-0128" class="btn btn--phone"><i class="fas fa-phone"></i> 02-6337-0128</a>
+        <a href="contact.html" class="btn btn--primary">빠른 견적</a>
+      </div>
+      <button class="header__hamburger" id="hamburger" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">홈</a> <span>›</span> <a href="guide.html">기술 가이드</a> <span>›</span> <span style="color:#fff">실린더 선택 기준</span>
+      </div>
+      <h1>유압·공압 실린더 선택 기준 및 추력 계산</h1>
+      <p>부하 하중과 작동 스트로크, 씰링 시스템에 따른 파카(Parker) 액추에이터 엔지니어링 가이드</p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <div class="content">
+    <div class="container">
+      <div class="content__inner">
+
+        <div class="info-box">
+          <h4>📌 핵심 요약</h4>
+          <p>실린더를 선택할 때는 <strong>① 유압 vs 공압 결정</strong>, <strong>② 필요 추력에 따른 튜브 내경(Bore) 계산</strong>, <strong>③ 스트로크(행정) 및 로드 좌굴 검토</strong>, <strong>④ 쿠션(Cushion) 및 마운팅 브라켓</strong>을 차례로 검토해야 합니다.</p>
+        </div>
+
+        <h2>1. 유압 실린더 vs 공압 실린더 비교</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>항목</th>
+              <th>유압 실린더 (Hydraulic Cylinder)</th>
+              <th>공압 실린더 (Pneumatic Cylinder)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>작동 매체</strong></td>
+              <td>비압축성 유압 작동유</td>
+              <td>압축 공기 (Air)</td>
+            </tr>
+            <tr>
+              <td><strong>공급 압력</strong></td>
+              <td>고압 (70 ~ 210 bar, 특수형 350 bar)</td>
+              <td>저압 (4 ~ 8 bar, 최대 10 bar)</td>
+            </tr>
+            <tr>
+              <td><strong>출력 (추력)</strong></td>
+              <td>⭐⭐⭐⭐⭐ 수 톤 ~ 수백 톤의 막강한 힘</td>
+              <td>⭐⭐ 수십 kg ~ 수 톤 (대구경 실린더 기준)</td>
+            </tr>
+            <tr>
+              <td><strong>정밀도/제어성</strong></td>
+              <td>오일의 비압축성으로 중간 정지 및 속도 정밀 제어 용이</td>
+              <td>공기 압축성으로 인해 중간 정지 시 바운싱 발생 가능</td>
+            </tr>
+            <tr>
+              <td><strong>작동 속도</strong></td>
+              <td>저속 ~ 중속 (안정적)</td>
+              <td>고속 왕복 운동에 최적화</td>
+            </tr>
+            <tr>
+              <td><strong>주요 용도</strong></td>
+              <td>프레스, 사출성형기, 건설중장비, 제철소</td>
+              <td>자동화 조립 라인, 클램핑, 픽앤플레이스</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>2. 실린더 추력(힘) 계산 공식</h2>
+        <p>실린더가 밀어내는 이론 추력은 <strong>작동 압력(P)</strong>과 <strong>피스톤 유효 수압 면적(A)</strong>의 곱으로 산출됩니다.</p>
+        
+        <div class="info-box" style="font-family:monospace; font-size:1rem; line-height:1.8;">
+          <strong>전진 시 추력 (Push Force):</strong> F = P × (π × D² / 4)<br>
+          <strong>후진 시 인장력 (Pull Force):</strong> F = P × [π × (D² - d²) / 4]<br>
+          <span style="font-size:0.85rem; color:var(--text-light); font-family:sans-serif;">
+            (D: 실린더 튜브 내경, d: 피스톤 로드 외경, P: 공급 압력)
+          </span>
+        </div>
+
+        <div class="warning-box">
+          <h4>⚠️ 실무 부하율(Safety Factor) 반영 필수</h4>
+          <p>마찰 저항, 배압, 가속도 등을 고려하여 실제 선정 시에는 이론 추력의 <strong>60%~70% 수준(부하율)</strong>으로 여유 있게 보어경을 한 치수 크게 선정하는 것이 안전합니다.</p>
+        </div>
+
+        <h2>3. 파카 유압 실린더 구조: 타이로드 vs 원형 웰디드</h2>
+        <div class="spec-grid">
+          <div class="spec-item">
+            <div class="spec-item__label">타이로드(Tie-rod)형 (2H / 3L 시리즈)</div>
+            <div class="spec-item__value">NFPA / ISO 규격 표준 산업용 실린더</div>
+            <p style="font-size:0.88rem; color:var(--text-light); margin-top:8px;">
+              실린더 튜브 외부에 4개의 타이로드 볼트로 캡과 헤드를 고정하는 구조로, 분해·유지보수와 씰 키트 교체가 매우 용이합니다.
+            </p>
+          </div>
+          <div class="spec-item">
+            <div class="spec-item__label">밀타입(Mill Type) 및 원형 용접형</div>
+            <div class="spec-item__value">제철소, 중장비, 가혹 환경 전용 실린더</div>
+            <p style="font-size:0.88rem; color:var(--text-light); margin-top:8px;">
+              외경이 굵고 일체형 구조로 용접되어 충격 하중과 고진동, 고온 제철 설비에 견디는 초내구성 실린더입니다.
+            </p>
+          </div>
+        </div>
+
+        <h2>4. 실린더 수명을 좌우하는 파카 씰링 시스템</h2>
+        <p>파카 실린더의 독보적인 내구성은 내부 장착 씰에서 비롯됩니다:</p>
+        <ul>
+          <li><strong>로드 씰(Rod Seal):</strong> 고압 폴리우레탄 립 씰로 오일 누유 방지 및 마찰 최소화</li>
+          <li><strong>와이퍼 씰(Wiper Seal):</strong> 미세 분진과 수분을 긁어내어 실린더 내부 오염 방지</li>
+          <li><strong>피스톤 씰(Piston Seal):</strong> 양방향 고압을 안정적으로 유지하는 슬리퍼 씰 또는 캡 씰 적용</li>
+          <li>희영이엔지는 <strong>실린더 정품 씰 키트(Repair Kit)</strong>를 상시 공급하여 신속한 오버홀을 지원합니다.</li>
+        </ul>
+
+        <div class="related-guide">
+          <div class="related-guide__text">
+            <h4>📦 관련 제품 페이지</h4>
+            <p>파카(Parker) 유압·공압 실린더 및 씰 키트</p>
+          </div>
+          <a href="products.html#cylinder" class="btn btn--white btn--sm">실린더 제품 보러가기 →</a>
+        </div>
+
+        <div class="related-guide" style="margin-top:16px;">
+          <div class="related-guide__text">
+            <h4>📘 함께 보면 좋은 가이드</h4>
+            <p>유압씰·공압씰·회전형씰 차이와 선택 기준</p>
+          </div>
+          <a href="guide-seal-type.html" class="btn btn--white btn--sm">씰 선택 가이드 →</a>
+        </div>
+
+        <!-- CTA -->
+        <div style="background:var(--primary-light); border-radius:12px; padding:32px; margin-top:40px; text-align:center;">
+          <h3 style="margin-top:0;">신규 실린더 설계나 기존 실린더 수리가 필요하신가요?</h3>
+          <p>내경(보어), 행정(스트로크), 장착 방식, 작동 압력을 알려주시면 최적의 실린더 및 정품 씰 키트를 추천해 드립니다.</p>
+          <a href="contact.html" class="btn btn--primary" style="margin-top:12px;">
+            <i class="fas fa-paper-plane"></i> 실린더 견적 문의하기
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__info">
+          <div class="footer__logo"><span class="logo-hy">HY</span><span class="logo-eng">-ENG</span></div>
+          <p><strong>주식회사 희영이엔지</strong></p>
+          <p>파카하나핀코리아(Parker Hannifin) 공인 씰 전문 대리점</p>
+        </div>
+        <div class="footer__contact">
+          <h4>연락처</h4>
+          <ul>
+            <li><i class="fas fa-phone"></i> <a href="tel:02-6337-0128">02-6337-0128</a></li>
+            <li><i class="fas fa-mobile-alt"></i> <a href="tel:010-4594-8037">010-4594-8037</a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:info@hy-eng.co.kr">info@hy-eng.co.kr</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>기술 가이드</h4>
+          <ul>
+            <li><a href="guide-cylinder-selection.html">실린더 선택 기준</a></li>
+            <li><a href="guide-valve-selection.html">밸브 선택 기준</a></li>
+            <li><a href="guide-hose-selection.html">유압호스 선택 기준</a></li>
+            <li><a href="guide-seal-type.html">씰 종류별 선택</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>제품</h4>
+          <ul>
+            <li><a href="products.html#cylinder">실린더</a></li>
+            <li><a href="products.html#hydraulic-seals">유압씰</a></li>
+            <li><a href="products.html#pneumatic-seals">공압씰</a></li>
+            <li><a href="products.html#valve">밸브</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom"><p>&copy; 2024 주식회사 희영이엔지(HY-ENG). All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <div class="floating-cta">
+    <a href="tel:010-4594-8037" class="floating-btn floating-btn--phone"><i class="fas fa-phone"></i></a>
+    <a href="contact.html" class="floating-btn floating-btn--quote"><i class="fas fa-file-invoice"></i></a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

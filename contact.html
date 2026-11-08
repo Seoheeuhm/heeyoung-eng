@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>견적·문의 | 희영이엔지 – 파카(Parker) 오링·씰 견적 요청</title>
+  <meta name="description" content="파카(Parker) 오링, 유압씰, 공압씰, 호스, 밸브, 실린더, 펌프, 필터 견적 요청. 품번, 치수, 사용 조건을 알려주시면 1시간 내 회신.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.hy-eng.co.kr/contact.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">
+        <div class="logo-svg">
+          <div class="sl-mark">
+            <span class="sl-h">H</span>
+            <span class="sl-y-box">
+              <svg class="sl-oval-svg" viewBox="0 0 100 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="61" cy="37" rx="56" ry="31" stroke="#f07820" stroke-width="5.5" fill="none" stroke-dasharray="151 54 74"/>
+              </svg>
+              <span class="sl-y">Y</span>
+            </span>
+          </div>
+          <span class="sl-name">희영이엔지</span>
+        </div>
+      </a>
+      <nav class="header__nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">홈</a></li>
+          <li class="nav__dropdown">
+            <a href="products.html" class="nav__link">제품 <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown__menu">
+              <li><a href="products.html#orings">오링 (O-Ring)</a></li>
+              <li><a href="products.html#hydraulic-seals">유압씰</a></li>
+              <li><a href="products.html#pneumatic-seals">공압씰</a></li>
+              <li><a href="products.html#rotary-seals">회전형씰</a></li>
+              <li><a href="products.html#hose">호스</a></li>
+              <li><a href="products.html#valve">밸브</a></li>
+              <li><a href="products.html#cylinder">실린더</a></li>
+              <li><a href="products.html#pump">펌프</a></li>
+              <li><a href="products.html#filter">필터</a></li>
+            </ul>
+          </li>
+          <li class="nav__dropdown">
+            <a href="guide.html" class="nav__link">기술 가이드 <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown__menu">
+              <li><a href="guide-oring-spec.html">오링 규격 확인법</a></li>
+              <li><a href="guide-material.html">NBR vs FKM 재질 비교</a></li>
+              <li><a href="guide-parker-pn.html">파카 품번 대체품 찾기</a></li>
+              <li><a href="guide-seal-type.html">씰 종류별 선택 기준</a></li>
+              <li><a href="guide-checklist.html">재질 선택 체크리스트</a></li>
+              <li><a href="guide-inquiry.html">문의 시 필요 정보</a></li>
+              <li><a href="guide-hose-selection.html">유압호스 선택 기준</a></li>
+              <li><a href="guide-valve-selection.html">밸브 선택 기준</a></li>
+              <li><a href="guide-cylinder-selection.html">실린더 선택 기준</a></li>
+              <li><a href="guide-pump-filter-selection.html">펌프·필터 선택 기준</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="nav__link">회사 소개</a></li>
+          <li><a href="contact.html" class="nav__link active">견적·문의</a></li>
+        </ul>
+      </nav>
+      <div class="header__cta">
+        <a href="tel:02-6337-0128" class="btn btn--phone"><i class="fas fa-phone"></i> 02-6337-0128</a>
+      </div>
+      <button class="header__hamburger" id="hamburger" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <h1>견적 · 문의</h1>
+    <p>품번, 치수, 사용 조건을 알려주시면 빠르게 견적 및 기술 상담을 해드립니다.</p>
+  </div>
+
+  <main>
+    <section class="about-section">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- 견적 폼 -->
+          <div>
+            <h2 style="font-size:1rem;font-weight:700;margin-bottom:12px;">온라인 견적 요청</h2>
+            <form id="quoteForm" action="mailto:info@hy-eng.co.kr" method="POST" enctype="text/plain">
+              <div class="form-group">
+                <label>회사명 / 이름 <span style="color:red;">*</span></label>
+                <input type="text" name="company" required placeholder="예: ○○기계 / 홍길동">
+              </div>
+              <div class="form-group">
+                <label>연락처 <span style="color:red;">*</span></label>
+                <input type="tel" name="phone" required placeholder="예: 010-1234-5678">
+              </div>
+              <div class="form-group">
+                <label>이메일</label>
+                <input type="email" name="email" placeholder="예: hong@company.com">
+              </div>
+              <div class="form-group">
+                <label>제품 종류 <span style="color:red;">*</span></label>
+                <select name="product" required>
+                  <option value="">선택하세요</option>
+                  <option value="오링">오링 (O-Ring)</option>
+                  <option value="유압씰">유압씰</option>
+                  <option value="공압씰">공압씰</option>
+                  <option value="회전형씰">회전형씰 / 오일씰</option>
+                  <option value="호스">호스 / 피팅</option>
+                  <option value="밸브">밸브</option>
+                  <option value="실린더">실린더</option>
+                  <option value="펌프">펌프</option>
+                  <option value="필터">필터</option>
+                  <option value="기타">기타</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>품번 (Part Number)</label>
+                <input type="text" name="partNumber" placeholder="예: 2-012 N0674-70, PR402H0001">
+              </div>
+              <div class="form-group">
+                <label>치수 (내경 × 외경 × 높이 또는 단면두께)</label>
+                <input type="text" name="dimensions" placeholder="예: ID 9.25 × CS 1.78 mm">
+              </div>
+              <div class="form-group">
+                <label>사용 조건 (유체, 온도, 압력)</label>
+                <input type="text" name="conditions" placeholder="예: 유압유, 80°C, 250bar">
+              </div>
+              <div class="form-group">
+                <label>수량</label>
+                <input type="text" name="quantity" placeholder="예: 100개">
+              </div>
+              <div class="form-group">
+                <label>기타 문의 사항</label>
+                <textarea name="message" placeholder="추가 문의 사항, 도면, 기존 사용 제품 정보 등"></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary btn--lg" style="width:100%;justify-content:center;">
+                <i class="fas fa-paper-plane"></i> 견적 요청하기
+              </button>
+            </form>
+          </div>
+
+          <!-- 연락처 사이드바 -->
+          <div>
+            <div class="contact-info-sidebar" style="margin-bottom:16px;">
+              <h3><i class="fas fa-headset" style="color:var(--blue);margin-right:6px;"></i> 직접 연락하기</h3>
+              <p style="font-size:.8rem;color:var(--text-l);margin-bottom:12px;">전화·이메일로 더 빠르게 상담받으세요.</p>
+              <ul>
+                <li><i class="fas fa-phone"></i> <strong>전화:</strong> <a href="tel:02-6337-0128">02-6337-0128</a></li>
+                <li><i class="fas fa-mobile-alt"></i> <strong>휴대폰:</strong> <a href="tel:010-4594-8037">010-4594-8037</a></li>
+                <li><i class="fas fa-fax"></i> <strong>팩스:</strong> 02-6269-0128</li>
+                <li><i class="fas fa-envelope"></i> <strong>이메일:</strong> <a href="mailto:info@hy-eng.co.kr">info@hy-eng.co.kr</a></li>
+                <li><i class="fas fa-clock"></i> <strong>영업시간:</strong> 평일 09:00~18:00</li>
+              </ul>
+            </div>
+
+            <div class="contact-info-sidebar" style="margin-bottom:16px;">
+              <h3><i class="fas fa-lightbulb" style="color:var(--accent);margin-right:6px;"></i> 빠른 견적 받는 팁</h3>
+              <p style="font-size:.8rem;color:var(--text-l);line-height:1.6;">
+                아래 정보를 함께 보내주시면 더 정확하고 빠른 견적을 받으실 수 있습니다:
+              </p>
+              <ul style="margin-top:8px;">
+                <li><i class="fas fa-barcode"></i> <strong>품번</strong> (Part Number)</li>
+                <li><i class="fas fa-ruler"></i> <strong>치수</strong> (내경×외경×높이)</li>
+                <li><i class="fas fa-camera"></i> <strong>사진</strong> (기존 제품 촬영)</li>
+                <li><i class="fas fa-thermometer-half"></i> <strong>사용 조건</strong> (유체·온도·압력)</li>
+              </ul>
+              <a href="guide-inquiry.html" class="tag-link" style="margin-top:10px;display:inline-flex;">
+                <i class="fas fa-book"></i> 문의 시 필요 정보 가이드 →
+              </a>
+            </div>
+
+            <div class="contact-info-sidebar">
+              <h3><i class="fas fa-map-marker-alt" style="color:var(--accent);margin-right:6px;"></i> 오시는 길</h3>
+              <p style="font-size:.8rem;color:var(--text-l);">서울특별시 금천구 시흥대로 97<br>시흥유통상가 31동 249호</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__info">
+          <div class="footer__logo"><span class="logo-hy">HY</span><span class="logo-eng">-ENG</span></div>
+          <p><strong>주식회사 희영이엔지</strong></p>
+          <p>파카하나핀코리아(Parker Hannifin) 공인 씰 전문 대리점</p>
+          <p class="footer__address"><i class="fas fa-map-marker-alt"></i> 서울특별시 금천구 시흥대로 97, 시흥유통상가 31동 249호</p>
+        </div>
+        <div class="footer__contact">
+          <h4>연락처</h4>
+          <ul>
+            <li><i class="fas fa-phone"></i> <a href="tel:02-6337-0128">02-6337-0128</a></li>
+            <li><i class="fas fa-mobile-alt"></i> <a href="tel:010-4594-8037">010-4594-8037</a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:info@hy-eng.co.kr">info@hy-eng.co.kr</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>제품</h4>
+          <ul>
+            <li><a href="products.html#orings">오링</a></li>
+            <li><a href="products.html#hydraulic-seals">유압씰</a></li>
+            <li><a href="products.html#hose">호스</a></li>
+            <li><a href="products.html#valve">밸브</a></li>
+            <li><a href="products.html#cylinder">실린더</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>기술 가이드</h4>
+          <ul>
+            <li><a href="guide-oring-spec.html">오링 규격 확인법</a></li>
+            <li><a href="guide-material.html">NBR vs FKM 비교</a></li>
+            <li><a href="guide-inquiry.html">문의 시 필요 정보</a></li>
+            <li><a href="guide.html" style="color:var(--accent);"><strong>전체 가이드 →</strong></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom"><p>&copy; 2024 주식회사 희영이엔지(HY-ENG). All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <div class="floating-cta">
+    <a href="tel:010-4594-8037" class="floating-btn floating-btn--phone" aria-label="전화 문의"><i class="fas fa-phone"></i></a>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>

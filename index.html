@@ -40,109 +40,497 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
-<body data-page="home">
-<div class="wrap">
+<body>
 
-<div id="header-placeholder"></div>
-
-<!-- ===== SLIDER ===== -->
-<div class="slider-wrap">
-  <div class="slide s1 active">
-    <div class="sl-bg"></div><div class="sl-dim"></div>
-    <div class="inner sl-txt">
-      <p class="sl-tag">주식회사 희영이엔지</p>
-      <h1 style="color:rgba(255,255,255,.85)">희영이엔지 — <span style="white-space:nowrap">파카하니핀(Parker Hannifin)</span><br/><strong style="color:#fff">전 제품군 공인 대리점</strong></h1>
-      <p class="sl-desc">오링·씰은 물론 유압·공압 부품까지<br/>Parker Hannifin 전 제품군 정품 공급 · 14년 신뢰 · 250개 거래 업체</p>
-      <div class="sl-trust">
-        <span>✓ 100% 정품</span>
-        <span>✓ 조건별 제품 검토</span>
-        <span>✓ 신속 납기</span>
+  <!-- ==================== HEADER ==================== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">
+        <div class="logo-svg">
+          <div class="sl-mark">
+            <span class="sl-h">H</span>
+            <span class="sl-y-box">
+              <svg class="sl-oval-svg" viewBox="0 0 100 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="61" cy="37" rx="56" ry="31" stroke="#f07820" stroke-width="5.5" fill="none" stroke-dasharray="151 54 74"/>
+              </svg>
+              <span class="sl-y">Y</span>
+            </span>
+          </div>
+          <span class="sl-name">희영이엔지</span>
+        </div>
+      </a>
+      <nav class="header__nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link active">홈</a></li>
+          <li class="nav__dropdown">
+            <a href="products.html" class="nav__link">제품 <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown__menu">
+              <li><a href="products.html#orings">오링 (O-Ring)</a></li>
+              <li><a href="products.html#hydraulic-seals">유압씰</a></li>
+              <li><a href="products.html#pneumatic-seals">공압씰</a></li>
+              <li><a href="products.html#rotary-seals">회전형씰</a></li>
+              <li><a href="products.html#hose">호스</a></li>
+              <li><a href="products.html#valve">밸브</a></li>
+              <li><a href="products.html#cylinder">실린더</a></li>
+              <li><a href="products.html#pump">펌프</a></li>
+              <li><a href="products.html#filter">필터</a></li>
+            </ul>
+          </li>
+          <li class="nav__dropdown">
+            <a href="guide.html" class="nav__link">기술 가이드 <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown__menu">
+              <li><a href="guide-oring-spec.html">오링 규격 확인법</a></li>
+              <li><a href="guide-material.html">NBR vs FKM 재질 비교</a></li>
+              <li><a href="guide-parker-pn.html">파카 품번 대체품 찾기</a></li>
+              <li><a href="guide-seal-type.html">씰 종류별 선택 기준</a></li>
+              <li><a href="guide-checklist.html">재질 선택 체크리스트</a></li>
+              <li><a href="guide-inquiry.html">문의 시 필요 정보</a></li>
+              <li><a href="guide-hose-selection.html">유압호스 선택 기준</a></li>
+              <li><a href="guide-valve-selection.html">밸브 선택 기준</a></li>
+              <li><a href="guide-cylinder-selection.html">실린더 선택 기준</a></li>
+              <li><a href="guide-pump-filter-selection.html">펌프·필터 선택 기준</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="nav__link">회사 소개</a></li>
+          <li><a href="contact.html" class="nav__link">견적·문의</a></li>
+        </ul>
+      </nav>
+      <div class="header__cta">
+        <a href="tel:02-6337-0128" class="btn btn--phone"><i class="fas fa-phone"></i> 02-6337-0128</a>
+        <a href="contact.html" class="btn btn--primary">빠른 견적</a>
       </div>
+      <button class="header__hamburger" id="hamburger" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </div>
-  <div class="slide s2">
-    <div class="sl-bg"></div><div class="sl-dim"></div>
-    <div class="inner sl-txt">
-      <p class="sl-tag">100% 정품 Parker Hannifin 제품</p>
-      <h2>오링·씰을 넘어<br/>Parker Hannifin<br/><strong style="white-space:nowrap">전 제품군 공급</strong></h2>
-      <p class="sl-desc">사용 유체, 압력, 온도, 치수 조건에 맞춰<br/>적용 가능한 제품을 검토합니다</p>
-    </div>
-  </div>
-  <button class="sarr sarr-l" id="sPrev">&#10094;</button>
-  <button class="sarr sarr-r" id="sNext">&#10095;</button>
-  <div class="sdots">
-    <button class="sdot active" data-i="0"></button>
-    <button class="sdot" data-i="1"></button>
-  </div>
-</div>
+  </header>
 
-<!-- ===== HOME CONTENT ===== -->
-<main class="home-main simple-home">
-  <section class="home-cred">
-    <div class="home-cred-mark">
-      <b>HY</b>
-      <span>ENG</span>
-    </div>
-    <div class="home-cred-copy">
-      <p class="home-eyebrow">AUTHORIZED SEAL DISTRIBUTOR</p>
-      <h3>주식회사 희영이엔지</h3>
-      <p>희영이엔지는 파카 씰 대리점, 즉 Parker Hannifin Korea 공인 씰 전문 대리점으로서 산업 현장의 씰 선정과 정품 공급을 지원합니다. 단순 판매가 아니라 사용 조건에 맞는 소재, 규격, 적용 가능성을 함께 검토합니다.</p>
-    </div>
-    <div class="home-cred-stats">
-      <div><strong style="color:var(--accent)">14년</strong><span>공인 대리점</span></div>
-      <div><strong>100%</strong><span>정품 공급</span></div>
-      <div><strong>기술 상담</strong><span>조건별 제품 검토</span></div>
+  <!-- ==================== HERO (COMPACT STRIP) ==================== -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div>
+        <div class="hero__badge">Parker Hannifin 공인 대리점 · <strong class="badge-num">14</strong>년 신뢰</div>
+        <h1 class="hero__title">
+          파카(Parker) 정품 <strong>씰·오링·유공압 부품</strong> 전문 공급
+        </h1>
+        <p class="hero__subtitle">
+          오링 · 유압씰 · 공압씰 · 회전형씰 · 호스 · 밸브 · 실린더 · 펌프 · 필터<br>
+          <strong>품번 하나</strong>로 정확한 제품을 빠르게 찾아드립니다.
+        </p>
+        <div class="hero__actions">
+          <a href="contact.html" class="btn btn--accent"><i class="fas fa-paper-plane"></i> 견적 요청</a>
+          <a href="products.html" class="btn btn--outline-white"><i class="fas fa-th-list"></i> 제품 보기</a>
+        </div>
+      </div>
+      <div class="hero__trust">
+        <span><i class="fas fa-check-circle"></i> 100% 정품</span>
+        <span><i class="fas fa-check-circle"></i> 당일 출고 가능</span>
+        <span><i class="fas fa-check-circle"></i> 기술 상담 무료</span>
+        <span><i class="fas fa-check-circle"></i> 250개 거래 업체</span>
+      </div>
     </div>
   </section>
 
-  <section class="home-simple-grid">
-    <div class="home-info-panel">
-      <h3>공식 공급망 기반의 정품 납품</h3>
-      <p>O-링(고무링), 유압씰, 공압씰, 회전형 씰, 오일씰, 호스 등 Parker Hannifin의 씰·호스 제품을 공식 유통 경로로 공급합니다. 파카씰 품번 확인, 대체품 검토, 긴급 납기 상담까지 현장 대응을 기준으로 움직입니다.</p>
-      <ul class="home-check-list">
-        <li>제품군별 Parker 정품 공급</li>
-        <li>사용 유체·온도·압력 조건 검토</li>
-        <li>규격 확인 및 대체품 상담</li>
-      </ul>
-    </div>
+  <!-- ==================== PRODUCT CATEGORIES (WITH IMAGES) ==================== -->
+  <section class="section products-overview" id="products">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">PRODUCTS</span>
+        <h2 class="section__title">파카(Parker) 제품 라인업</h2>
+      </div>
+      <div class="product-grid">
 
-    <div class="home-contact-panel">
-      <h3>연락처</h3>
-      <p>제품명, 사용 유체, 압력, 온도, 치수 조건을 알려주시면 적용 가능한 제품을 확인해 드립니다.</p>
-      <dl class="home-contact-list">
-        <div><dt>TEL</dt><dd><a href="tel:02-6337-0128">02-6337-0128</a></dd></div>
-        <div><dt>H.P</dt><dd><a href="tel:010-4594-8037">010-4594-8037</a></dd></div>
-        <div><dt>E-MAIL</dt><dd><a href="mailto:info@hy-eng.co.kr">info@hy-eng.co.kr</a></dd></div>
-      </dl>
-      <div class="home-contact-actions">
-        <a href="mailto:info@hy-eng.co.kr">이메일 문의</a>
-        <a href="tel:02-6337-0128">전화 상담</a>
+        <a href="products.html#orings" class="product-card">
+          <div class="product-card__img"><img src="assets/oring.avif" alt="Parker 오링 O-Ring 제품"></div>
+          <div class="product-card__body">
+            <h3>오링 (O-Ring)</h3>
+            <p>AS568·JIS·DIN ISO 규격<br>NBR, FKM, EPDM, FFKM</p>
+          </div>
+          <span class="product-card__link">자세히 보기 →</span>
+        </a>
+
+        <a href="products.html#hydraulic-seals" class="product-card">
+          <div class="product-card__img"><img src="assets/piston-seal.avif" alt="Parker 유압씰 피스톤씰"></div>
+          <div class="product-card__body">
+            <h3>유압씰</h3>
+            <p>로드씰·피스톤씰·와이퍼<br>최대 600bar 고압 대응</p>
+          </div>
+          <span class="product-card__link">자세히 보기 →</span>
+        </a>
+
+        <a href="products.html#pneumatic-seals" class="product-card">
+          <div class="product-card__img"><img src="assets/buffer-seal.avif" alt="Parker 공압씰"></div>
+          <div class="product-card__body">
+            <h3>공압씰</h3>
+            <p>공압 실린더·밸브용<br>저마찰·고수명 설계</p>
+          </div>
+          <span class="product-card__link">자세히 보기 →</span>
+        </a>
+
+        <a href="products.html#rotary-seals" class="product-card">
+          <div class="product-card__img"><img src="assets/rotary.avif" alt="Parker 회전형씰 오일씰"></div>
+          <div class="product-card__body">
+            <h3>회전형씰</h3>
+            <p>오일씰·V-Ring·립씰<br>고속 회전축 대응</p>
+          </div>
+          <span class="product-card__link">자세히 보기 →</span>
+        </a>
+
+        <a href="products.html#hose" class="product-card">
+          <div class="product-card__img"><img src="assets/hose-hero.avif" alt="Parker 유압호스 산업호스"></div>
+          <div class="product-card__body">
+            <h3>호스</h3>
+            <p>유압호스·산업호스<br>피팅·어댑터·어셈블리</p>
+          </div>
+          <span class="product-card__link">자세히 보기 →</span>
+        </a>
+
+        <a href="products.html#valve" class="product-card">
+          <div class="product-card__img"><img src="assets/valve-hero.avif" alt="Parker 유압밸브 공압밸브"></div>
+          <div class="product-card__body">
+            <h3>밸브</h3>
+            <p>유압밸브·공압밸브<br>방향·압력·유량제어</p>
+          </div>
+          <span class="product-card__link">자세히 보기 →</span>
+        </a>
+
+        <a href="products.html#cylinder" class="product-card">
+          <div class="product-card__img"><img src="assets/cylinder-hero.avif" alt="Parker 유압실린더 공압실린더"></div>
+          <div class="product-card__body">
+            <h3>실린더</h3>
+            <p>유압·공압실린더<br>표준형·맞춤 설계</p>
+          </div>
+          <span class="product-card__link">자세히 보기 →</span>
+        </a>
+
+        <a href="products.html#pump" class="product-card">
+          <div class="product-card__img"><img src="assets/pump-hero.avif" alt="Parker 유압펌프 기어펌프"></div>
+          <div class="product-card__body">
+            <h3>펌프</h3>
+            <p>유압펌프·기어펌프<br>피스톤·베인펌프</p>
+          </div>
+          <span class="product-card__link">자세히 보기 →</span>
+        </a>
+
+        <a href="products.html#filter" class="product-card">
+          <div class="product-card__img"><img src="assets/filter-hero.avif" alt="Parker 유압필터 라인필터"></div>
+          <div class="product-card__body">
+            <h3>필터</h3>
+            <p>유압필터·라인필터<br>리턴필터·에어브리더</p>
+          </div>
+          <span class="product-card__link">자세히 보기 →</span>
+        </a>
+
+      </div>
+
+      <!-- O-링 부속품 & 회전형 씰 상세 쇼케이스 (기존 사이트 원본 데이터 연동) -->
+      <div class="showcase-dual-grid">
+        <!-- O-링 부속품 요약 박스 -->
+        <div style="background:#fff; border:1px solid var(--border); border-radius:var(--radius); padding:14px 16px;">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px;">
+            <h3 style="font-size:1.0rem; font-weight:700; color:var(--blue-d); margin:0;">
+              <i class="fas fa-tools" style="color:var(--accent); margin-right:4px;"></i> ■ O-링 부속품 상세 사양
+            </h3>
+            <a href="products.html#orings" class="tag-link" style="font-size:.79rem;">전체보기 →</a>
+          </div>
+          <p style="font-size:.83rem; color:var(--text-l); margin-bottom:10px; font-weight:normal;">
+            정비 시간을 줄여주는 규격별 정품 O-링 키트(AS568 513개입)와 씰 수명을 연장하는 정품 윤활제입니다.
+          </p>
+          <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:6px;">
+            <a href="products.html#orings" style="text-align:center; text-decoration:none; color:var(--text);">
+              <img src="assets/oring-kit.avif" alt="O-링 키트" style="height:52px; margin:0 auto 3px; object-fit:contain; border:1px solid var(--border); border-radius:4px; padding:2px; background:#fafbfc;">
+              <span style="font-size:.75rem; font-weight:500; display:block;">N0674-70 Kit</span>
+            </a>
+            <a href="products.html#orings" style="text-align:center; text-decoration:none; color:var(--text);">
+              <img src="assets/o-lube.webp" alt="O-Lube 윤활제" style="height:52px; margin:0 auto 3px; object-fit:contain; border:1px solid var(--border); border-radius:4px; padding:2px; background:#fafbfc;">
+              <span style="font-size:.75rem; font-weight:500; display:block;">O-Lube</span>
+            </a>
+            <a href="products.html#orings" style="text-align:center; text-decoration:none; color:var(--text);">
+              <img src="assets/super-o-lube.avif" alt="Super O-Lube" style="height:52px; margin:0 auto 3px; object-fit:contain; border:1px solid var(--border); border-radius:4px; padding:2px; background:#fafbfc;">
+              <span style="font-size:.75rem; font-weight:500; display:block;">Super O-Lube</span>
+            </a>
+            <a href="products.html#orings" style="text-align:center; text-decoration:none; color:var(--text);">
+              <img src="assets/fluorocarbon-90-kit.avif" alt="바이톤 90 Kit" style="height:52px; margin:0 auto 3px; object-fit:contain; border:1px solid var(--border); border-radius:4px; padding:2px; background:#fafbfc;">
+              <span style="font-size:.75rem; font-weight:500; display:block;">V0709-90 Kit</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 회전형 씰 3대 카테고리 요약 박스 -->
+        <div style="background:#fff; border:1px solid var(--border); border-radius:var(--radius); padding:14px 16px;">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px;">
+            <h3 style="font-size:1.0rem; font-weight:700; color:var(--blue-d); margin:0;">
+              <i class="fas fa-sync-alt" style="color:var(--accent); margin-right:4px;"></i> 회전형 씰 &amp; 베어링 격리 장치
+            </h3>
+            <a href="products.html#rotary-seals" class="tag-link" style="font-size:.79rem;">전체보기 →</a>
+          </div>
+          <p style="font-size:.83rem; color:var(--text-l); margin-bottom:10px; font-weight:normal;">
+            고속 회전축, 침수 오일 밀봉, 스위블 조인트에 완벽 대응하는 Parker 정품 회전 밀봉 시스템입니다.
+          </p>
+          <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:6px;">
+            <a href="products.html#cat-bearing-isolator" style="text-align:center; text-decoration:none; color:var(--text);">
+              <img src="assets/bearing-isolator.avif" alt="베어링 격리 장치" style="height:52px; margin:0 auto 3px; object-fit:contain; border:1px solid var(--border); border-radius:4px; padding:2px; background:#fafbfc;">
+              <span style="font-size:.75rem; font-weight:500; display:block;">베어링 격리 장치</span>
+            </a>
+            <a href="products.html#cat-rotary-shaft-seal" style="text-align:center; text-decoration:none; color:var(--text);">
+              <img src="assets/rotary-shaft-seal.avif" alt="회전 샤프트 씰" style="height:52px; margin:0 auto 3px; object-fit:contain; border:1px solid var(--border); border-radius:4px; padding:2px; background:#fafbfc;">
+              <span style="font-size:.75rem; font-weight:500; display:block;">회전 샤프트 씰</span>
+            </a>
+            <a href="products.html#cat-rotor-seal" style="text-align:center; text-decoration:none; color:var(--text);">
+              <img src="assets/rotor-seal.avif" alt="로터 씰" style="height:52px; margin:0 auto 3px; object-fit:contain; border:1px solid var(--border); border-radius:4px; padding:2px; background:#fafbfc;">
+              <span style="font-size:.75rem; font-weight:500; display:block;">로터 씰 (스위블)</span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-</main>
+  <!-- ==================== WHY CHOOSE US (COMPACT) ==================== -->
+  <section class="section why-us">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">WHY HY-ENG</span>
+        <h2 class="section__title">왜 희영이엔지인가요?</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-card__num">01</div>
+          <h3>파카(Parker) 공인 대리점</h3>
+          <p>Parker Hannifin Korea 공식 인증, 100% 정품만 공급합니다.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-card__num">02</div>
+          <h3>전문 기술 상담</h3>
+          <p>유체·온도·압력 조건을 알려주시면 최적 제품을 선정해드립니다.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-card__num">03</div>
+          <h3>빠른 납기</h3>
+          <p>주요 규격 재고 보유, 당일 출고 가능. 특수 규격도 최단 납기 공급.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-card__num">04</div>
+          <h3>대체품 검토</h3>
+          <p>타사 품번이나 기존 제품 정보로 파카 호환 제품을 찾아드립니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div id="footer-placeholder"></div>
-</div>
-<script src="common.js"></script>
-<script>
-// Slider
-const slides = Array.from(document.querySelectorAll('.slide'));
-const dots   = Array.from(document.querySelectorAll('.sdot'));
-let cur = 0, tmr;
-function go(n) {
-  slides[cur].classList.remove('active'); dots[cur].classList.remove('active');
-  cur = (n + slides.length) % slides.length;
-  slides[cur].classList.add('active'); dots[cur].classList.add('active');
-}
-function start() { clearInterval(tmr); tmr = setInterval(() => go(cur+1), 5000); }
-document.getElementById('sPrev').addEventListener('click', () => { go(cur-1); start(); });
-document.getElementById('sNext').addEventListener('click', () => { go(cur+1); start(); });
-dots.forEach(d => d.addEventListener('click', () => { go(+d.dataset.i); start(); }));
-start();
-</script>
+  <!-- ==================== GUIDE ARTICLES (COMPACT) ==================== -->
+  <section class="section guides" id="guides">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">TECHNICAL GUIDE</span>
+        <h2 class="section__title">기술 가이드 &amp; 선택 기준</h2>
+        <p class="section__desc">제품 선택이 어려우신가요? 실무에서 바로 쓰는 가이드를 확인하세요.</p>
+      </div>
+      <div class="guide-grid">
+
+        <a href="guide-oring-spec.html" class="guide-card">
+          <div class="guide-card__tag">오링</div>
+          <h3>오링 규격 확인 방법과 규격표 보는 법</h3>
+          <p>AS568, JIS, DIN ISO 규격 차이와 치수 읽는 법</p>
+          <span class="guide-card__link">가이드 읽기 →</span>
+        </a>
+
+        <a href="guide-material.html" class="guide-card">
+          <div class="guide-card__tag">재질</div>
+          <h3>오링 재질 비교: NBR과 FKM(바이톤)</h3>
+          <p>사용 조건별 NBR·FKM 선택 기준 비교</p>
+          <span class="guide-card__link">가이드 읽기 →</span>
+        </a>
+
+        <a href="guide-parker-pn.html" class="guide-card">
+          <div class="guide-card__tag">품번</div>
+          <h3>파카 품번으로 대체품 찾는 순서</h3>
+          <p>품번에서 규격·재질·경도 분리하여 호환 제품 찾기</p>
+          <span class="guide-card__link">가이드 읽기 →</span>
+        </a>
+
+        <a href="guide-seal-type.html" class="guide-card">
+          <div class="guide-card__tag">씰</div>
+          <h3>유압·공압·회전형씰 차이와 선택 기준</h3>
+          <p>압력·속도·방향에 따른 씰 종류별 특성</p>
+          <span class="guide-card__link">가이드 읽기 →</span>
+        </a>
+
+        <a href="guide-checklist.html" class="guide-card">
+          <div class="guide-card__tag">체크리스트</div>
+          <h3>유체·온도·압력별 재질 선택 체크리스트</h3>
+          <p>사용 조건 5가지로 최적 재질 결정</p>
+          <span class="guide-card__link">가이드 읽기 →</span>
+        </a>
+
+        <a href="guide-inquiry.html" class="guide-card">
+          <div class="guide-card__tag">문의팁</div>
+          <h3>문의 시 알려주면 좋은 정보</h3>
+          <p>품번·치수·사진 준비로 정확한 견적 받기</p>
+          <span class="guide-card__link">가이드 읽기 →</span>
+        </a>
+
+        <a href="guide-hose-selection.html" class="guide-card">
+          <div class="guide-card__tag">호스</div>
+          <h3>유압호스 선택 기준 (STAMPED)</h3>
+          <p>호스 내경, 상용 압력, 피팅 규격 매칭법</p>
+          <span class="guide-card__link">가이드 읽기 →</span>
+        </a>
+
+        <a href="guide-valve-selection.html" class="guide-card">
+          <div class="guide-card__tag">밸브</div>
+          <h3>밸브 선택 기준과 실무 가이드</h3>
+          <p>방향제어, 릴리프, 유량제어 밸브 선정</p>
+          <span class="guide-card__link">가이드 읽기 →</span>
+        </a>
+
+        <a href="guide-cylinder-selection.html" class="guide-card">
+          <div class="guide-card__tag">실린더</div>
+          <h3>실린더 선택 기준 및 추력 계산</h3>
+          <p>보어경·스트로크 선정, 씰 키트 수명 관리</p>
+          <span class="guide-card__link">가이드 읽기 →</span>
+        </a>
+
+        <a href="guide-pump-filter-selection.html" class="guide-card">
+          <div class="guide-card__tag">펌프·필터</div>
+          <h3>펌프 및 필터 선택 기준</h3>
+          <p>토출 유량 계산, 오일 오염 방지 필터 교체</p>
+          <span class="guide-card__link">가이드 읽기 →</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== QUICK INQUIRY CTA (INLINE) ==================== -->
+  <section class="section cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-box__text">
+          <h2>제품 문의 · 견적 · 기술 상담</h2>
+          <p>품번, 치수, 사용 조건을 알려주시면 <strong>1시간 내</strong> 회신드립니다.</p>
+        </div>
+        <div class="cta-box__actions">
+          <a href="tel:02-6337-0128" class="btn btn--white">
+            <i class="fas fa-phone"></i> 02-6337-0128
+          </a>
+          <a href="tel:010-4594-8037" class="btn btn--outline-white">
+            <i class="fas fa-mobile-alt"></i> 010-4594-8037
+          </a>
+          <a href="mailto:info@hy-eng.co.kr" class="btn btn--outline-white">
+            <i class="fas fa-envelope"></i> info@hy-eng.co.kr
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ (COMPACT) ==================== -->
+  <section class="section faq" id="faq">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">FAQ</span>
+        <h2 class="section__title">자주 묻는 질문</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>파카(Parker) 오링의 규격은 어떻게 확인하나요?</summary>
+          <div class="faq-item__answer">
+            <p>오링 규격은 <strong>내경(ID) × 단면두께(CS)</strong>로 표기됩니다. AS568(인치), JIS B 2401(P·G계), DIN ISO 3601(미터법) 세 가지 표준이 있으며, 파카 품번에 규격 정보가 포함되어 있습니다. <a href="guide-oring-spec.html">→ 오링 규격 가이드 보기</a></p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>NBR과 FKM(바이톤) 오링의 차이가 뭔가요?</summary>
+          <div class="faq-item__answer">
+            <p>NBR(니트릴)은 범용 내유성 고무로 –40~120°C에서 사용됩니다. FKM(바이톤)은 고성능 불소고무로 –20~200°C 고온·내화학 환경에 적합합니다. <a href="guide-material.html">→ 재질 비교 가이드 보기</a></p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>다른 브랜드 씰을 파카 제품으로 교체할 수 있나요?</summary>
+          <div class="faq-item__answer">
+            <p>네, 기존 품번과 치수 정보를 알려주시면 파카 호환 제품을 찾아드립니다. <a href="guide-parker-pn.html">→ 대체품 찾기 가이드 보기</a></p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>견적 문의 시 어떤 정보를 알려주면 되나요?</summary>
+          <div class="faq-item__answer">
+            <p>① 품번(Part Number) ② 치수(내경×외경×높이) ③ 사용 유체·온도·압력 ④ 기존 제품 사진을 보내주시면 가장 정확한 견적을 받으실 수 있습니다. <a href="guide-inquiry.html">→ 문의 가이드 보기</a></p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__info">
+          <div class="footer__logo">
+            <span class="logo-hy">HY</span><span class="logo-eng">-ENG</span>
+          </div>
+          <p><strong>주식회사 희영이엔지</strong></p>
+          <p>파카하나핀코리아(Parker Hannifin) 공인 씰 전문 대리점</p>
+          <p class="footer__address">
+            <i class="fas fa-map-marker-alt"></i> 서울특별시 금천구 시흥대로 97, 시흥유통상가 31동 249호
+          </p>
+          <p style="font-size:.7rem;color:rgba(255,255,255,.4);margin-top:4px;">사업자번호: 119-86-56059 | 대표: 나경애</p>
+        </div>
+        <div class="footer__contact">
+          <h4>연락처</h4>
+          <ul>
+            <li><i class="fas fa-phone"></i> <a href="tel:02-6337-0128">02-6337-0128</a></li>
+            <li><i class="fas fa-mobile-alt"></i> <a href="tel:010-4594-8037">010-4594-8037</a></li>
+            <li><i class="fas fa-fax"></i> 02-6269-0128</li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:info@hy-eng.co.kr">info@hy-eng.co.kr</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>제품</h4>
+          <ul>
+            <li><a href="products.html#orings">오링 (O-Ring)</a></li>
+            <li><a href="products.html#hydraulic-seals">유압씰</a></li>
+            <li><a href="products.html#pneumatic-seals">공압씰</a></li>
+            <li><a href="products.html#rotary-seals">회전형씰</a></li>
+            <li><a href="products.html#hose">호스</a></li>
+            <li><a href="products.html#valve">밸브</a></li>
+            <li><a href="products.html#cylinder">실린더</a></li>
+            <li><a href="products.html#pump">펌프</a></li>
+            <li><a href="products.html#filter">필터</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>기술 가이드</h4>
+          <ul>
+            <li><a href="guide-oring-spec.html">오링 규격 확인법</a></li>
+            <li><a href="guide-material.html">NBR vs FKM 비교</a></li>
+            <li><a href="guide-parker-pn.html">대체품 찾기</a></li>
+            <li><a href="guide-seal-type.html">씰 종류별 선택</a></li>
+            <li><a href="guide-hose-selection.html">유압호스 선택</a></li>
+            <li><a href="guide-valve-selection.html">밸브 선택 기준</a></li>
+            <li><a href="guide.html" style="color:var(--accent);"><strong>전체 가이드 보기 →</strong></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2024 주식회사 희영이엔지(HY-ENG). All rights reserved. | Parker Hannifin® is a registered trademark of Parker Hannifin Corporation.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating CTA -->
+  <div class="floating-cta">
+    <a href="tel:010-4594-8037" class="floating-btn floating-btn--phone" aria-label="전화 문의">
+      <i class="fas fa-phone"></i>
+    </a>
+    <a href="contact.html" class="floating-btn floating-btn--quote" aria-label="견적 요청">
+      <i class="fas fa-file-invoice"></i>
+    </a>
+  </div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

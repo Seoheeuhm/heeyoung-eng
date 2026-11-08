@@ -5,92 +5,191 @@
   <title>회사소개 | 주식회사 희영이엔지</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
-<body data-page="about">
-<div class="wrap">
-<div id="header-placeholder"></div>
+<body>
 
-<div class="sub-nav-bar">
-  <div class="sub-nav-inner">
-    <span class="sep">홈</span><span class="sep">›</span>
-    <a href="about.html" class="on">회사소개</a>
-    <a href="about.html#parker">Parker 공인 대리점</a>
-  </div>
-</div>
-
-<div class="page-content">
-  <div class="about-page">
-    <div>
-
-      <!-- 회사 소개 -->
-      <div class="about-box" style="margin-bottom:14px;">
-        <div class="about-visual">
-          <div class="av-ring"><div class="av-ring-c"><b>HY</b><small>ENG</small></div></div>
-          <div class="av-badge"><strong>Parker Hannifin Korea</strong><em>14년</em><span>공인 씰 전문 대리점</span></div>
-          <div style="flex:1;">
-            <h3>주식회사 희영이엔지</h3>
-            <p>Parker Hannifin Korea 공인 씰 전문 대리점으로서, 14년간 국내 산업 현장에 최고 품질의 씰 제품을 공급해 온 전문 기업입니다.</p>
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">
+        <div class="logo-svg">
+          <div class="sl-mark">
+            <span class="sl-h">H</span>
+            <span class="sl-y-box">
+              <svg class="sl-oval-svg" viewBox="0 0 100 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="61" cy="37" rx="56" ry="31" stroke="#f07820" stroke-width="5.5" fill="none" stroke-dasharray="151 54 74"/>
+              </svg>
+              <span class="sl-y">Y</span>
+            </span>
           </div>
+          <span class="sl-name">희영이엔지</span>
         </div>
-
-        <p style="font-size:.86rem;color:#525c6e;line-height:1.85;margin-bottom:14px;">
-          주식회사 희영이엔지는 <strong style="color:#0d5290;">Parker Hannifin Korea의 공인 씰 전문 대리점</strong>으로, 오링(O-Ring), 유압씰, 공압씰, 로터리씰, 오일씰 등 씰 &amp; 오링 전 라인업을 Parker 본사 공식 공급망을 통해 100% 정품으로 납품하고 있습니다.
-        </p>
-        <p style="font-size:.86rem;color:#525c6e;line-height:1.85;margin-bottom:22px;">
-          자동차 부품, 공조 시스템, 중공업, 에너지·플랜트, 정밀기계 분야의 국내 주요 기업들과 장기적인 파트너십을 유지하며, 신속한 납기와 전문적인 기술 지원으로 고객의 설비 안전과 생산성 향상에 기여하고 있습니다.
-        </p>
-
-        <div class="about-strengths">
-          <div class="as-item"><span class="as-num">01</span><div><strong>Parker Hannifin Korea 공인 대리점</strong><p>국내 정식 공인 대리점 자격을 14년간 유지</p></div></div>
-          <div class="as-item"><span class="as-num">02</span><div><strong>100% 정품 공급 보증</strong><p>공식 유통 경로만을 통한 Parker 정품 취급</p></div></div>
-          <div class="as-item"><span class="as-num">03</span><div><strong>신속한 납기 대응</strong><p>주요 품목 상시 재고 운영, 긴급 납품 대응 가능</p></div></div>
-          <div class="as-item"><span class="as-num">04</span><div><strong>전문 기술 상담 지원</strong><p>씰 소재·규격 선정부터 적용·교체까지 전문가 지원</p></div></div>
-        </div>
+      </a>
+      <nav class="header__nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">홈</a></li>
+          <li class="nav__dropdown">
+            <a href="products.html" class="nav__link">제품 <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown__menu">
+              <li><a href="products.html#orings">오링 (O-Ring)</a></li>
+              <li><a href="products.html#hydraulic-seals">유압씰</a></li>
+              <li><a href="products.html#pneumatic-seals">공압씰</a></li>
+              <li><a href="products.html#rotary-seals">회전형씰</a></li>
+              <li><a href="products.html#hose">호스</a></li>
+              <li><a href="products.html#valve">밸브</a></li>
+              <li><a href="products.html#cylinder">실린더</a></li>
+              <li><a href="products.html#pump">펌프</a></li>
+              <li><a href="products.html#filter">필터</a></li>
+            </ul>
+          </li>
+          <li class="nav__dropdown">
+            <a href="guide.html" class="nav__link">기술 가이드 <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown__menu">
+              <li><a href="guide-oring-spec.html">오링 규격 확인법</a></li>
+              <li><a href="guide-material.html">NBR vs FKM 재질 비교</a></li>
+              <li><a href="guide-parker-pn.html">파카 품번 대체품 찾기</a></li>
+              <li><a href="guide-seal-type.html">씰 종류별 선택 기준</a></li>
+              <li><a href="guide-checklist.html">재질 선택 체크리스트</a></li>
+              <li><a href="guide-inquiry.html">문의 시 필요 정보</a></li>
+              <li><a href="guide-hose-selection.html">유압호스 선택 기준</a></li>
+              <li><a href="guide-valve-selection.html">밸브 선택 기준</a></li>
+              <li><a href="guide-cylinder-selection.html">실린더 선택 기준</a></li>
+              <li><a href="guide-pump-filter-selection.html">펌프·필터 선택 기준</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="nav__link active">회사 소개</a></li>
+          <li><a href="contact.html" class="nav__link">견적·문의</a></li>
+        </ul>
+      </nav>
+      <div class="header__cta">
+        <a href="tel:02-6337-0128" class="btn btn--phone"><i class="fas fa-phone"></i> 02-6337-0128</a>
+        <a href="contact.html" class="btn btn--primary">빠른 견적</a>
       </div>
-
-      <!-- 회사 정보 -->
-      <div class="about-box" style="margin-bottom:14px;">
-        <h5 style="font-size:.9rem;font-weight:700;color:#0d5290;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #2171b8;">■ 회사 정보</h5>
-        <table class="about-meta-table">
-          <tr><th>상호명</th><td>주식회사 희영이엔지</td></tr>
-          <tr><th>영문명</th><td>HEEYOUNG ENG CO., LTD.</td></tr>
-          <tr><th>사업자등록번호</th><td>119-86-56059</td></tr>
-          <tr><th>소재지</th><td>서울시 금천구 시흥대로 97 시흥유통상가 31-249</td></tr>
-          <tr><th>대표 전화</th><td>02-6337-0128</td></tr>
-          <tr><th>FAX</th><td>02-6269-0128</td></tr>
-          <tr><th>핸드폰</th><td>010-4594-8037</td></tr>
-          <tr><th>이메일</th><td>info@hy-eng.co.kr</td></tr>
-          <tr><th>업종</th><td>산업용 씰 전문 공급업</td></tr>
-          <tr><th>대리점 자격</th><td>Parker Hannifin Korea 공인 씰 전문 대리점</td></tr>
-        </table>
-      </div>
-
-      <!-- Parker 대리점 -->
-      <div id="parker" class="about-box">
-        <h5 style="font-size:.9rem;font-weight:700;color:#0d5290;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #2171b8;">■ Parker Hannifin Korea 공인 대리점</h5>
-        <p style="font-size:.85rem;color:#525c6e;line-height:1.85;margin-bottom:14px;">
-          <strong style="color:#0d5290;">Parker Hannifin Corporation</strong>은 1917년 미국에서 설립된 세계 최대의 모션 &amp; 컨트롤 기술 기업으로, 씰 &amp; 오링 분야에서 전 세계 산업 표준을 선도하고 있습니다. 항공우주, 방위산업, 자동차, 반도체, 석유화학, 식품·의료 등 거의 모든 산업 분야에 Parker의 씰 제품이 적용됩니다.
-        </p>
-        <p style="font-size:.85rem;color:#525c6e;line-height:1.85;margin-bottom:14px;">
-          희영이엔지는 Parker Hannifin Korea로부터 정식 공인을 받은 씰 전문 대리점으로, 본사 공식 공급망을 통해 국내에 Parker 씰 제품을 공급합니다. 이를 통해 고객은 정품 인증, 품질 보증, 기술 지원을 포함한 Parker 브랜드의 신뢰를 그대로 제공받을 수 있습니다.
-        </p>
-        <div style="background:#0a3f72;border-radius:6px;padding:16px 20px;display:flex;align-items:center;gap:16px;">
-          <div style="width:48px;height:48px;background:#e05a10;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Roboto',sans-serif;font-size:1.3rem;font-weight:900;color:#fff;flex-shrink:0;">P</div>
-          <div>
-            <strong style="display:block;font-size:.9rem;font-weight:700;color:#fff;margin-bottom:3px;">Parker Hannifin Korea 공인 씰 전문 대리점</strong>
-            <span style="font-size:.78rem;color:rgba(255,255,255,.65);">정식 공인 대리점 자격 보유 · 100% 정품 공급 · 기술 지원</span>
-          </div>
-        </div>
-      </div>
-
+      <button class="header__hamburger" id="hamburger" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
     </div>
-    <div class="sidebar-placeholder"></div>
-  </div>
-</div>
+  </header>
 
-<div id="footer-placeholder"></div>
-</div>
-<script src="common.js"></script>
+  <div class="page-header">
+    <h1>회사 소개</h1>
+    <p>Parker Hannifin Korea 공인 씰 전문 대리점 — 주식회사 희영이엔지</p>
+  </div>
+
+  <main>
+    <!-- 회사 소개 -->
+    <section class="about-section">
+      <div class="container">
+        <div style="max-width:800px;">
+          <h2 style="font-size:1.1rem;font-weight:800;margin-bottom:8px;">주식회사 희영이엔지</h2>
+          <p style="font-size:.85rem;line-height:1.6;color:var(--text-l);margin-bottom:16px;">
+            희영이엔지는 파카하나핀코리아(Parker Hannifin Korea) <strong>공인 씰 전문 대리점</strong>으로, 14년간 산업 현장에 파카 정품 씰·오링·유공압 부품을 공급하고 있습니다. 단순 판매가 아니라 사용 유체·온도·압력 조건에 맞는 소재, 규격, 적용 가능성을 함께 검토합니다.
+          </p>
+        </div>
+
+        <!-- 강점 4가지 -->
+        <div class="strengths-grid" style="margin-bottom:24px;">
+          <div class="strength-card">
+            <i class="fas fa-certificate"></i>
+            <h3>공인 대리점 <strong style="color:var(--accent);font-size:1.15em;font-weight:900;">14</strong>년</h3>
+            <p>Parker Hannifin Korea 공식 인증. 100% 정품만 공급합니다.</p>
+          </div>
+          <div class="strength-card">
+            <i class="fas fa-microscope"></i>
+            <h3>기술 상담</h3>
+            <p>유체·온도·압력 조건 검토 후 최적 제품을 선정해드립니다.</p>
+          </div>
+          <div class="strength-card">
+            <i class="fas fa-shipping-fast"></i>
+            <h3>빠른 납기</h3>
+            <p>주요 규격 재고 보유. 당일 출고 및 긴급 납기 대응.</p>
+          </div>
+          <div class="strength-card">
+            <i class="fas fa-exchange-alt"></i>
+            <h3>대체품 검토</h3>
+            <p>타사 품번으로 파카 호환 제품 검토. 규격 확인 서비스.</p>
+          </div>
+        </div>
+
+        <!-- 회사 정보 테이블 -->
+        <h2 style="font-size:1rem;font-weight:700;margin-bottom:8px;">회사 정보</h2>
+        <table class="company-info-table" style="margin-bottom:20px;">
+          <tr><th>상호</th><td>주식회사 희영이엔지 (HEEYOUNG ENG CO., LTD.)</td></tr>
+          <tr><th>대표</th><td>나경애</td></tr>
+          <tr><th>사업자번호</th><td>119-86-56059</td></tr>
+          <tr><th>주소</th><td>서울특별시 금천구 시흥대로 97, 시흥유통상가 31동 249호</td></tr>
+          <tr><th>전화</th><td><a href="tel:02-6337-0128">02-6337-0128</a></td></tr>
+          <tr><th>휴대폰</th><td><a href="tel:010-4594-8037">010-4594-8037</a></td></tr>
+          <tr><th>팩스</th><td>02-6269-0128</td></tr>
+          <tr><th>이메일</th><td><a href="mailto:info@hy-eng.co.kr">info@hy-eng.co.kr</a></td></tr>
+          <tr><th>영업시간</th><td>평일 09:00 ~ 18:00 (토·일·공휴일 휴무)</td></tr>
+          <tr><th>취급 브랜드</th><td>Parker Hannifin (파카하나핀)</td></tr>
+          <tr><th>주요 제품</th><td>오링, 유압씰, 공압씰, 회전형씰, 호스, 밸브, 실린더, 펌프, 필터</td></tr>
+        </table>
+
+        <!-- 오시는 길 -->
+        <h2 style="font-size:1rem;font-weight:700;margin-bottom:8px;">오시는 길</h2>
+        <p style="font-size:.82rem;color:var(--text-l);margin-bottom:8px;">
+          <i class="fas fa-map-marker-alt" style="color:var(--accent);"></i> 서울특별시 금천구 시흥대로 97, 시흥유통상가 31동 249호
+        </p>
+        <p style="font-size:.78rem;color:var(--text-m);margin-bottom:8px;">
+          지하철 1호선 독산역 2번 출구 → 도보 10분 | 7호선 가산디지털단지역 5번 출구 → 도보 12분
+        </p>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3166.5!2d126.8934!3d37.4668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z7ISc7Jq47Yq567OE7IucIOq4iOyynOq1rCDsi5ztnabrjIDroZwgOTc!5e0!3m2!1sko!2skr!4v1" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__info">
+          <div class="footer__logo"><span class="logo-hy">HY</span><span class="logo-eng">-ENG</span></div>
+          <p><strong>주식회사 희영이엔지</strong></p>
+          <p>파카하나핀코리아(Parker Hannifin) 공인 씰 전문 대리점</p>
+          <p class="footer__address"><i class="fas fa-map-marker-alt"></i> 서울특별시 금천구 시흥대로 97, 시흥유통상가 31동 249호</p>
+        </div>
+        <div class="footer__contact">
+          <h4>연락처</h4>
+          <ul>
+            <li><i class="fas fa-phone"></i> <a href="tel:02-6337-0128">02-6337-0128</a></li>
+            <li><i class="fas fa-mobile-alt"></i> <a href="tel:010-4594-8037">010-4594-8037</a></li>
+            <li><i class="fas fa-fax"></i> 02-6269-0128</li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:info@hy-eng.co.kr">info@hy-eng.co.kr</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>제품</h4>
+          <ul>
+            <li><a href="products.html#orings">오링</a></li>
+            <li><a href="products.html#hydraulic-seals">유압씰</a></li>
+            <li><a href="products.html#pneumatic-seals">공압씰</a></li>
+            <li><a href="products.html#rotary-seals">회전형씰</a></li>
+            <li><a href="products.html#hose">호스</a></li>
+            <li><a href="products.html#valve">밸브</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>기술 가이드</h4>
+          <ul>
+            <li><a href="guide-oring-spec.html">오링 규격 확인법</a></li>
+            <li><a href="guide-material.html">NBR vs FKM 비교</a></li>
+            <li><a href="guide-seal-type.html">씰 종류별 선택</a></li>
+            <li><a href="guide.html" style="color:var(--accent);"><strong>전체 가이드 →</strong></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom"><p>&copy; 2024 주식회사 희영이엔지(HY-ENG). All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <div class="floating-cta">
+    <a href="tel:010-4594-8037" class="floating-btn floating-btn--phone" aria-label="전화 문의"><i class="fas fa-phone"></i></a>
+    <a href="contact.html" class="floating-btn floating-btn--quote" aria-label="견적 요청"><i class="fas fa-file-invoice"></i></a>
+  </div>
+  <script src="js/main.js"></script>
 </body>
 </html>

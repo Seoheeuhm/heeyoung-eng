@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>유압 펌프 및 필터 선택 기준: 토출량 계산과 오일 청정도 관리 | 희영이엔지</title>
+  <meta name="description" content="파카(Parker) 유압 펌프(기어/피스톤/베인) 및 고효율 필터 선택 기준 완벽 가이드. 펌프 토출량 계산식, ISO 오염도 관리, 라인 필터와 리턴 필터 선정 요령.">
+  <meta name="keywords" content="유압펌프 선택 기준, 파카 펌프, 기어펌프, 피스톤펌프, 유압필터, 오일 청정도, ISO 4406, 필터 엘리먼트, 파카 필터">
+  <link rel="canonical" href="https://www.hy-eng.co.kr/guide-pump-filter-selection.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">
+        <div class="logo-svg">
+          <div class="sl-mark">
+            <span class="sl-h">H</span>
+            <span class="sl-y-box">
+              <svg class="sl-oval-svg" viewBox="0 0 100 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="61" cy="37" rx="56" ry="31" stroke="#f07820" stroke-width="5.5" fill="none" stroke-dasharray="151 54 74"/>
+              </svg>
+              <span class="sl-y">Y</span>
+            </span>
+          </div>
+          <span class="sl-name">희영이엔지</span>
+        </div>
+      </a>
+      <nav class="header__nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">홈</a></li>
+          <li class="nav__dropdown">
+            <a href="products.html" class="nav__link">제품 <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown__menu">
+              <li><a href="products.html#orings">오링 (O-Ring)</a></li>
+              <li><a href="products.html#hydraulic-seals">유압씰</a></li>
+              <li><a href="products.html#pneumatic-seals">공압씰</a></li>
+              <li><a href="products.html#rotary-seals">회전형씰</a></li>
+              <li><a href="products.html#hose">호스</a></li>
+              <li><a href="products.html#valve">밸브</a></li>
+              <li><a href="products.html#cylinder">실린더</a></li>
+              <li><a href="products.html#pump">펌프</a></li>
+              <li><a href="products.html#filter">필터</a></li>
+            </ul>
+          </li>
+          <li class="nav__dropdown">
+            <a href="guide.html" class="nav__link active">기술 가이드 <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown__menu">
+              <li><a href="guide-oring-spec.html">오링 규격 확인법</a></li>
+              <li><a href="guide-material.html">NBR vs FKM 재질 비교</a></li>
+              <li><a href="guide-parker-pn.html">파카 품번 대체품 찾기</a></li>
+              <li><a href="guide-seal-type.html">씰 종류별 선택 기준</a></li>
+              <li><a href="guide-checklist.html">재질 선택 체크리스트</a></li>
+              <li><a href="guide-inquiry.html">문의 시 필요 정보</a></li>
+              <li><a href="guide-hose-selection.html">유압호스 선택 기준</a></li>
+              <li><a href="guide-valve-selection.html">밸브 선택 기준</a></li>
+              <li><a href="guide-cylinder-selection.html">실린더 선택 기준</a></li>
+              <li><a href="guide-pump-filter-selection.html">펌프·필터 선택 기준</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="nav__link">회사 소개</a></li>
+          <li><a href="contact.html" class="nav__link">견적·문의</a></li>
+        </ul>
+      </nav>
+      <div class="header__cta">
+        <a href="tel:02-6337-0128" class="btn btn--phone"><i class="fas fa-phone"></i> 02-6337-0128</a>
+        <a href="contact.html" class="btn btn--primary">빠른 견적</a>
+      </div>
+      <button class="header__hamburger" id="hamburger" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">홈</a> <span>›</span> <a href="guide.html">기술 가이드</a> <span>›</span> <span style="color:#fff">펌프·필터 선택 기준</span>
+      </div>
+      <h1>유압 펌프 및 필터 선택 기준</h1>
+      <p>유압 회로의 심장인 펌프의 토출량 계산과 설비 수명을 5배 늘리는 파카(Parker) 오일 청정도 관리 가이드</p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <div class="content">
+    <div class="container">
+      <div class="content__inner">
+
+        <div class="info-box">
+          <h4>📌 핵심 요약</h4>
+          <p>유압 펌프는 <strong>압력과 유량(cc/rev × RPM)</strong>에 맞춰 기어/피스톤/베인 타입을 결정합니다. 특히 <strong>유압 고장의 75% 이상은 작동유의 오염(이물질, 수분)</strong> 때문에 발생하므로, 올바른 <strong>라인 필터 및 리턴 필터</strong> 배치가 실린더와 밸브의 수명을 결정짓습니다.</p>
+        </div>
+
+        <h2>1. 유압 펌프 3대 타입 비교 및 선정</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>구분</th>
+              <th>기어 펌프 (Gear Pump)</th>
+              <th>피스톤 펌프 (Piston Pump)</th>
+              <th>베인 펌프 (Vane Pump)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>상용 압력</strong></td>
+              <td>중압 (150 ~ 250 bar)</td>
+              <td>고압·초고압 (250 ~ 420 bar)</td>
+              <td>중·저압 (70 ~ 175 bar)</td>
+            </tr>
+            <tr>
+              <td><strong>용적 효율</strong></td>
+              <td>⭐⭐⭐ 보통</td>
+              <td>⭐⭐⭐⭐⭐ 최고 효율 (95% 이상)</td>
+              <td>⭐⭐⭐⭐ 양호</td>
+            </tr>
+            <tr>
+              <td><strong>소음 수준</strong></td>
+              <td>다소 높은 편</td>
+              <td>중간</td>
+              <td>⭐⭐⭐⭐⭐ 매우 조용함 (저소음)</td>
+            </tr>
+            <tr>
+              <td><strong>용량 조절</strong></td>
+              <td>정용량형 (고정 토출량)</td>
+              <td>가변용량형 (로드센싱, 압력보상)</td>
+              <td>정용량형 및 가변용량형</td>
+            </tr>
+            <tr>
+              <td><strong>오염 내구성</strong></td>
+              <td>오염에 비교적 강함</td>
+              <td>정밀 틈새로 오염에 민감함</td>
+              <td>보통</td>
+            </tr>
+            <tr>
+              <td><strong>파카 대표 모델</strong></td>
+              <td>PGP 시리즈</td>
+              <td>PVplus / PD 시리즈</td>
+              <td>T6 / T7 덴슨 베인 시리즈</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>2. 펌프 토출 유량(Q) 계산 공식</h2>
+        <div class="info-box" style="font-family:monospace; font-size:1rem; line-height:1.8;">
+          <strong>토출 유량 Q (L/min) = (V × N × ηv) / 1000</strong><br>
+          <span style="font-size:0.85rem; color:var(--text-light); font-family:sans-serif;">
+            • V: 펌프 1회전당 토출 용적 (cc/rev)<br>
+            • N: 구동 모터 회전 속도 (RPM, 예: 4극 모터 1750 RPM)<br>
+            • ηv: 용적 효율 (기어펌프 약 0.85, 피스톤펌프 약 0.95)
+          </span>
+        </div>
+
+        <h2>3. 유압 고장을 막는 위치별 필터 구성</h2>
+        <p>유압 시스템의 신뢰성을 유지하기 위해 파카는 4중 여과 시스템을 권장합니다:</p>
+        
+        <div class="spec-grid">
+          <div class="spec-item">
+            <div class="spec-item__label">1. 석션 스트레이너 (Suction Strainer)</div>
+            <div class="spec-item__value">펌프 흡입구 거친 이물질 보호 (100~150 메쉬)</div>
+            <p style="font-size:0.85rem; color:var(--text-light); margin-top:6px;">큰 금속 부스러기가 펌프로 들어가는 것을 1차 차단합니다.</p>
+          </div>
+          <div class="spec-item">
+            <div class="spec-item__label">2. 고압 라인 필터 (Pressure Line Filter)</div>
+            <div class="spec-item__value">펌프 토출 직후 정밀 밸브 보호 (3~10 ㎛)</div>
+            <p style="font-size:0.85rem; color:var(--text-light); margin-top:6px;">서보 밸브 및 비례제어 밸브의 스풀 고착(Sticking)을 예방합니다.</p>
+          </div>
+          <div class="spec-item">
+            <div class="spec-item__label">3. 리턴 라인 필터 (Return Line Filter)</div>
+            <div class="spec-item__value">탱크 복귀 직전 유체 전량 여과 (10~25 ㎛)</div>
+            <p style="font-size:0.85rem; color:var(--text-light); margin-top:6px;">실린더 마모로 인해 발생한 슬러지가 오일 탱크로 누적되는 것을 차단합니다.</p>
+          </div>
+          <div class="spec-item">
+            <div class="spec-item__label">4. 에어 브리더 (Air Breather)</div>
+            <div class="spec-item__value">탱크 호흡구 분진 및 수분 유입 차단</div>
+            <p style="font-size:0.85rem; color:var(--text-light); margin-top:6px;">주위 대기 중의 먼지와 습기가 탱크 내부로 빨려 들어가는 것을 방지합니다.</p>
+          </div>
+        </div>
+
+        <h2>4. 필터 엘리먼트 교체 주기 및 차압 관리</h2>
+        <p>필터는 교체 시기를 놓치면 <strong>바이패스 밸브(Bypass Valve)가 열려 여과되지 않은 오염 오일이 그대로 회로로 순환</strong>하게 됩니다.</p>
+        <ul>
+          <li><strong>차압 게이지(Visual/Electrical Indicator) 확인:</strong> 녹색(정상)에서 황색/적색으로 지침이 넘어가면 즉시 엘리먼트 교체</li>
+          <li><strong>파카 Microglass™ 정품 엘리먼트:</strong> 미세 유리섬유 다층 구조로 일반 종이 필터 대비 4배 이상의 포집 용량과 긴 수명 보장</li>
+        </ul>
+
+        <div class="related-guide">
+          <div class="related-guide__text">
+            <h4>📦 관련 제품 페이지</h4>
+            <p>파카(Parker) 유압 펌프 및 필터 시스템 라인업</p>
+          </div>
+          <div>
+            <a href="products.html#pump" class="btn btn--white btn--sm">펌프 제품 보기 →</a>
+            <a href="products.html#filter" class="btn btn--outline-white btn--sm" style="margin-left:8px">필터 제품 보기 →</a>
+          </div>
+        </div>
+
+        <div class="related-guide" style="margin-top:16px;">
+          <div class="related-guide__text">
+            <h4>📘 함께 보면 좋은 가이드</h4>
+            <p>유체·온도·압력 조건별 재질 및 부품 선택 체크리스트</p>
+          </div>
+          <a href="guide-checklist.html" class="btn btn--white btn--sm">체크리스트 보기 →</a>
+        </div>
+
+        <!-- CTA -->
+        <div style="background:var(--primary-light); border-radius:12px; padding:32px; margin-top:40px; text-align:center;">
+          <h3 style="margin-top:0;">펌프 교체나 필터 엘리먼트 수급이 필요하신가요?</h3>
+          <p>사용 중인 펌프/필터의 명판 사진이나 품번을 알려주시면 파카 정품 즉시 출고 및 호환 필터를 공급해 드립니다.</p>
+          <a href="contact.html" class="btn btn--primary" style="margin-top:12px;">
+            <i class="fas fa-paper-plane"></i> 펌프·필터 견적 문의하기
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__info">
+          <div class="footer__logo"><span class="logo-hy">HY</span><span class="logo-eng">-ENG</span></div>
+          <p><strong>주식회사 희영이엔지</strong></p>
+          <p>파카하나핀코리아(Parker Hannifin) 공인 씰 전문 대리점</p>
+        </div>
+        <div class="footer__contact">
+          <h4>연락처</h4>
+          <ul>
+            <li><i class="fas fa-phone"></i> <a href="tel:02-6337-0128">02-6337-0128</a></li>
+            <li><i class="fas fa-mobile-alt"></i> <a href="tel:010-4594-8037">010-4594-8037</a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:info@hy-eng.co.kr">info@hy-eng.co.kr</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>기술 가이드</h4>
+          <ul>
+            <li><a href="guide-pump-filter-selection.html">펌프·필터 선택 기준</a></li>
+            <li><a href="guide-cylinder-selection.html">실린더 선택 기준</a></li>
+            <li><a href="guide-valve-selection.html">밸브 선택 기준</a></li>
+            <li><a href="guide-hose-selection.html">유압호스 선택 기준</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>제품</h4>
+          <ul>
+            <li><a href="products.html#pump">펌프</a></li>
+            <li><a href="products.html#filter">필터</a></li>
+            <li><a href="products.html#valve">밸브</a></li>
+            <li><a href="products.html#cylinder">실린더</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom"><p>&copy; 2024 주식회사 희영이엔지(HY-ENG). All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <div class="floating-cta">
+    <a href="tel:010-4594-8037" class="floating-btn floating-btn--phone"><i class="fas fa-phone"></i></a>
+    <a href="contact.html" class="floating-btn floating-btn--quote"><i class="fas fa-file-invoice"></i></a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -83,59 +83,75 @@
 
           <!-- 견적 폼 -->
           <div>
-            <h2 style="font-size:1rem;font-weight:700;margin-bottom:12px;">온라인 견적 요청</h2>
-            <form id="quoteForm" action="mailto:info@hy-eng.co.kr" method="POST" enctype="text/plain">
+            <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:8px;color:var(--blue-d);">
+              <i class="fas fa-file-invoice" style="color:var(--accent);margin-right:6px;"></i> 온라인 견적 요청
+            </h2>
+            <p style="font-size:.82rem;color:var(--text-l);margin-bottom:14px;">
+              견적 요청 내용은 담당자 이메일(<strong>info@hy-eng.co.kr</strong>)로 실시간 즉시 전송되며, 영업시간 기준 1시간 내 신속하게 회신드립니다.
+            </p>
+            <form id="quoteForm" action="https://formsubmit.co/info@hy-eng.co.kr" method="POST">
+              <!-- FormSubmit 자동 이메일 전송 환경설정 -->
+              <input type="hidden" name="_subject" value="[희영이엔지] 신규 온라인 견적 요청이 접수되었습니다">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_replyto" value="">
+
               <div class="form-group">
                 <label>회사명 / 이름 <span style="color:red;">*</span></label>
-                <input type="text" name="company" required placeholder="예: ○○기계 / 홍길동">
+                <input type="text" name="회사명_또는_담당자" required placeholder="예: ○○기계 / 홍길동">
               </div>
               <div class="form-group">
                 <label>연락처 <span style="color:red;">*</span></label>
-                <input type="tel" name="phone" required placeholder="예: 010-1234-5678">
+                <input type="tel" name="연락처" required placeholder="예: 010-1234-5678">
               </div>
               <div class="form-group">
-                <label>이메일</label>
-                <input type="email" name="email" placeholder="예: hong@company.com">
+                <label>이메일 (회신받으실 주소)</label>
+                <input type="email" name="email" id="customerEmail" placeholder="예: customer@company.com">
               </div>
               <div class="form-group">
                 <label>제품 종류 <span style="color:red;">*</span></label>
-                <select name="product" required>
+                <select name="문의_제품종류" required>
                   <option value="">선택하세요</option>
-                  <option value="오링">오링 (O-Ring)</option>
-                  <option value="유압씰">유압씰</option>
-                  <option value="공압씰">공압씰</option>
-                  <option value="회전형씰">회전형씰 / 오일씰</option>
-                  <option value="호스">호스 / 피팅</option>
-                  <option value="밸브">밸브</option>
-                  <option value="실린더">실린더</option>
-                  <option value="펌프">펌프</option>
-                  <option value="필터">필터</option>
-                  <option value="기타">기타</option>
+                  <option value="오링 (O-Ring)">오링 (O-Ring)</option>
+                  <option value="유압씰 (Hydraulic Seal)">유압씰 (Hydraulic Seal)</option>
+                  <option value="공압씰 (Pneumatic Seal)">공압씰 (Pneumatic Seal)</option>
+                  <option value="회전형씰 / 오일씰 (Rotary & Oil Seal)">회전형씰 / 오일씰 (Rotary & Oil Seal)</option>
+                  <option value="호스 / 피팅 (Hose & Fittings)">호스 / 피팅 (Hose & Fittings)</option>
+                  <option value="밸브 (Valves)">밸브 (Valves)</option>
+                  <option value="실린더 (Cylinders)">실린더 (Cylinders)</option>
+                  <option value="펌프 (Pumps)">펌프 (Pumps)</option>
+                  <option value="필터 (Filters)">필터 (Filters)</option>
+                  <option value="기타 부품">기타 부품</option>
                 </select>
               </div>
               <div class="form-group">
-                <label>품번 (Part Number)</label>
-                <input type="text" name="partNumber" placeholder="예: 2-012 N0674-70, PR402H0001">
+                <label>파카 품번 (Part Number)</label>
+                <input type="text" name="파카_품번" placeholder="예: 2-012 N0674-70, PR402H0001">
               </div>
               <div class="form-group">
                 <label>치수 (내경 × 외경 × 높이 또는 단면두께)</label>
-                <input type="text" name="dimensions" placeholder="예: ID 9.25 × CS 1.78 mm">
+                <input type="text" name="규격_치수" placeholder="예: ID 9.25 × CS 1.78 mm">
               </div>
               <div class="form-group">
                 <label>사용 조건 (유체, 온도, 압력)</label>
-                <input type="text" name="conditions" placeholder="예: 유압유, 80°C, 250bar">
+                <input type="text" name="사용조건_유체_온도_압력" placeholder="예: 유압유, 80°C, 250bar">
               </div>
               <div class="form-group">
-                <label>수량</label>
-                <input type="text" name="quantity" placeholder="예: 100개">
+                <label>요청 수량</label>
+                <input type="text" name="요청수량" placeholder="예: 100개">
               </div>
               <div class="form-group">
-                <label>기타 문의 사항</label>
-                <textarea name="message" placeholder="추가 문의 사항, 도면, 기존 사용 제품 정보 등"></textarea>
+                <label>기타 문의 사항 / 요청 내용</label>
+                <textarea name="상세_문의내용" rows="4" placeholder="추가 문의 사항, 도면 유무, 긴급 납기 일정 등"></textarea>
               </div>
-              <button type="submit" class="btn btn--primary btn--lg" style="width:100%;justify-content:center;">
-                <i class="fas fa-paper-plane"></i> 견적 요청하기
+              <button type="submit" id="quoteSubmitBtn" class="btn btn--primary btn--lg" style="width:100%;justify-content:center;cursor:pointer;">
+                <i class="fas fa-paper-plane"></i> info@hy-eng.co.kr로 견적 요청하기
               </button>
+              <div id="quoteResultMsg" style="display:none;margin-top:12px;padding:12px;border-radius:6px;font-size:.85rem;line-height:1.5;"></div>
+              <p style="text-align:center;font-size:.78rem;color:var(--text-l);margin-top:12px;line-height:1.45;">
+                <i class="fas fa-paperclip"></i> 도면(PDF/CAD)이나 실물 사진을 첨부하시려면<br>
+                <a href="mailto:info@hy-eng.co.kr?subject=[희영이엔지%20견적문의]" style="color:var(--blue);font-weight:600;text-decoration:underline;">info@hy-eng.co.kr</a>로 직접 이메일을 보내주셔도 신속히 접수됩니다.
+              </p>
             </form>
           </div>
 

@@ -98,10 +98,81 @@ ${message}
     window.location.href = `mailto:info@hy-eng.co.kr?subject=${subject}&body=${body}`;
   }
 
+  // --- Quote Form: show success message after file-attached native submit redirects back (?sent=1) ---
+  if (window.location.search.includes('sent=1')) {
+    const resultMsg = document.getElementById('quoteResultMsg');
+    if (resultMsg) {
+      resultMsg.style.display = 'block';
+      resultMsg.style.background = '#e8f5e9';
+      resultMsg.style.color = '#2e7d32';
+      resultMsg.style.border = '1px solid #a5d6a7';
+      resultMsg.innerHTML = '<i class="fas fa-check-circle"></i> <strong>견적 요청(첨부파일 포함)이 info@hy-eng.co.kr로 안전하게 발송되었습니다!</strong><br>' +
+        '희영이엔지 담당자가 확인 후 영업시간 기준 1시간 내로 회신드리겠습니다.<br>' +
+        '<small style="color:#555;">(급하신 문의는 02-6337-0128 또는 010-4594-8037로 전화주시면 바로 상담이 가능합니다.)</small>';
+      resultMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    history.replaceState(null, '', window.location.pathname);
+  }
+
   // --- Online Quote Form Real Submission (info@hy-eng.co.kr) ---
   const quoteForm = document.getElementById('quoteForm');
   if (quoteForm) {
     quoteForm.addEventListener('submit', async function (e) {
+      // 첨부파일이 있으면 숨겨진 iframe을 통해 실제 폼 제출(멀티파트)로 보낸다.
+      // FormSubmit은 파일 첨부를 이 방식에서만 안정적으로 처리하며,
+      // AJAX 경로의 메일앱 대체(mailto)는 파일을 담아 보낼 수 없기 때문이다.
+      // iframe을 target으로 쓰면 화면 이동 없이 같은 효과를 낼 수 있다.
+      const attachedFileInput = quoteForm.querySelector('input[type="file"]');
+      const hasAttachedFile = attachedFileInput && attachedFileInput.files && attachedFileInput.files.length > 0;
+      const hiddenFrame = document.getElementById('quoteHiddenFrame');
+
+      if (hasAttachedFile && hiddenFrame) {
+        e.preventDefault();
+
+        if (!quoteForm.checkValidity()) {
+          quoteForm.reportValidity();
+          return;
+        }
+
+        const submitBtn = document.getElementById('quoteSubmitBtn') || quoteForm.querySelector('button[type="submit"]');
+        const resultMsg = document.getElementById('quoteResultMsg');
+        const originalBtnHtml = submitBtn.innerHTML;
+
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> info@hy-eng.co.kr 전송 중... (파일 포함)';
+        if (resultMsg) resultMsg.style.display = 'none';
+
+        let settled = false;
+        const finish = (ok) => {
+          if (settled) return;
+          settled = true;
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnHtml;
+          if (ok) {
+            if (resultMsg) {
+              resultMsg.style.display = 'block';
+              resultMsg.style.background = '#e8f5e9';
+              resultMsg.style.color = '#2e7d32';
+              resultMsg.style.border = '1px solid #a5d6a7';
+              resultMsg.innerHTML = '<i class="fas fa-check-circle"></i> <strong>견적 요청(첨부파일 포함)이 info@hy-eng.co.kr로 안전하게 발송되었습니다!</strong><br>' +
+                '희영이엔지 담당자가 확인 후 영업시간 기준 1시간 내로 회신드리겠습니다.<br>' +
+                '<small style="color:#555;">(급하신 문의는 02-6337-0128 또는 010-4594-8037로 전화주시면 바로 상담이 가능합니다.)</small>';
+            }
+            quoteForm.reset();
+          } else {
+            alert('첨부파일 전송에 시간이 다소 걸리고 있습니다.\n잠시 후 메일함을 확인해 주시거나, 급하신 경우 02-6337-0128로 전화 주세요.');
+          }
+        };
+
+        const onFrameLoad = () => { finish(true); hiddenFrame.removeEventListener('load', onFrameLoad); };
+        hiddenFrame.addEventListener('load', onFrameLoad);
+        setTimeout(() => finish(false), 15000);
+
+        quoteForm.target = 'quoteHiddenFrame';
+        quoteForm.submit();
+        return;
+      }
+
       e.preventDefault();
 
       const submitBtn = document.getElementById('quoteSubmitBtn') || quoteForm.querySelector('button[type="submit"]');

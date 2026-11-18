@@ -25,7 +25,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 14px; }
+html { scroll-behavior: smooth; font-size: 15px; }
 body { font-family: var(--font); color: var(--text); background: var(--bg); line-height: 1.55; -webkit-font-smoothing: antialiased; }
 a { color: var(--blue); text-decoration: none; transition: color var(--tr); }
 a:hover { color: var(--blue-d); }
@@ -68,7 +68,7 @@ ul { list-style: none; }
 
 /* Logo — Exact CI from hy-eng.co.kr */
 .header__logo { display: flex; align-items: center; text-decoration: none; }
-.logo-svg { display: flex; align-items: center; gap: 10px; }
+.logo-svg { display: flex; align-items: center; gap: 20px; }
 .sl-mark {
   display: inline-flex; align-items: center;
   font-family: 'Roboto', 'Arial Black', sans-serif;
@@ -97,7 +97,7 @@ ul { list-style: none; }
 .nav__list { display: flex; gap: 2px; align-items: center; }
 .nav__link {
   padding: 6px 12px; border-radius: var(--radius);
-  font-weight: 500; color: var(--text); font-size: .85rem;
+  font-weight: 500; color: var(--text); font-size: .94rem;
   display: flex; align-items: center; gap: 3px; transition: all var(--tr);
 }
 .nav__link:hover, .nav__link.active { color: var(--blue); background: #e8f0fa; }
@@ -145,14 +145,14 @@ ul { list-style: none; }
   line-height: 1; padding: 0 2px;
   text-shadow: 0 1px 3px rgba(0,0,0,.35);
 }
-.hero__title { color: #fff; font-size: 1.3rem; font-weight: 700; line-height: 1.4; margin-bottom: 4px; }
+.hero__title { color: #fff; font-size: 1.48rem; font-weight: 700; line-height: 1.4; margin-bottom: 12px; }
 .hero__title strong { color: var(--accent); }
-.hero__subtitle { color: rgba(255,255,255,.75); font-size: .82rem; line-height: 1.5; margin-bottom: 8px; }
+.hero__subtitle { color: rgba(255,255,255,.75); font-size: 1rem; line-height: 1.5; margin-bottom: 8px; }
 .hero__subtitle strong { color: #fff; }
 .hero__actions { display: flex; gap: 8px; margin-bottom: 6px; }
 .hero__actions .btn { padding: 7px 18px; font-size: .82rem; }
 .hero__trust { display: flex; gap: 14px; flex-wrap: wrap; }
-.hero__trust span { color: rgba(255,255,255,.7); font-size: .72rem; display: flex; align-items: center; gap: 4px; }
+.hero__trust span { color: rgba(255,255,255,.7); font-size: .9rem; display: flex; align-items: center; gap: 4px; }
 .hero__trust i { color: var(--accent); font-size: .65rem; }
 
 /* ---------- Sections ---------- */
@@ -184,7 +184,7 @@ ul { list-style: none; }
   background: linear-gradient(135deg, #e8f0fa, #f4f5f7); color: var(--blue); font-size: 1.6rem;
 }
 .product-card__body { padding: 10px; flex: 1; }
-.product-card__body h3 { font-size: .88rem; font-weight: 700; margin-bottom: 3px; color: var(--text); }
+.product-card__body h3 { font-size: .97rem; font-weight: 700; margin-bottom: 3px; color: var(--text); }
 .product-card__body p { font-size: .80rem; color: var(--text-l); line-height: 1.45; }
 .product-card__link {
   display: block; padding: 6px 10px; text-align: center;
@@ -534,7 +534,7 @@ ul { list-style: none; }
 }
 
 @media (max-width: 768px) {
-  html { font-size: 13px; }
+  html { font-size: 14px; }
   .container { padding: 0 14px; }
   .header__inner { height: 50px; }
   .sl-mark { font-size: 1.45rem; }
@@ -557,7 +557,7 @@ ul { list-style: none; }
   .hero { margin-top: 50px; padding: 16px 0; }
   .page-header, .page-hero { margin-top: 50px; }
   .hero__inner { flex-direction: column; text-align: center; }
-  .hero__title { font-size: 1.1rem; }
+  .hero__title { font-size: 1.29rem; }
   .hero__actions { justify-content: center; }
   .hero__trust { justify-content: center; }
   .product-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
@@ -584,7 +584,7 @@ ul { list-style: none; }
   .product-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; }
   .product-card__img { height: 80px; }
   .product-card__body { padding: 8px; }
-  .product-card__body h3 { font-size: .8rem; }
+  .product-card__body h3 { font-size: .9rem; }
   .why-grid { grid-template-columns: 1fr; }
   .spec-grid { grid-template-columns: 1fr; }
 }

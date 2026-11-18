@@ -156,7 +156,8 @@ ${message}
           headers: {
             'Accept': 'application/json'
           },
-          body: formData
+          body: formData,
+          signal: AbortSignal.timeout(10000)
         });
 
         const data = await response.json();
@@ -178,7 +179,10 @@ ${message}
         }
       } catch (err) {
         console.warn('FormSubmit failed, fallback to mailto:', err);
-        alert('온라인 전송 연결이 원활하지 않아 info@hy-eng.co.kr 직통 메일로 연결합니다.\n\n급하신 문의는 전화(02-6337-0128) 주시면 가장 빠르게 처리됩니다.');
+        const fileInput = quoteForm.querySelector('input[type="file"]');
+        const hasFile = fileInput && fileInput.files && fileInput.files.length > 0;
+        const fileNote = hasFile ? '\n\n⚠️ 첨부하신 파일은 메일 작성 화면에 자동으로 포함되지 않으니, 열리는 메일에 파일을 직접 다시 첨부해서 보내주세요.' : '';
+        alert('온라인 전송 연결이 원활하지 않아 info@hy-eng.co.kr 직통 메일로 연결합니다.\n\n급하신 문의는 전화(02-6337-0128) 주시면 가장 빠르게 처리됩니다.' + fileNote);
         sendViaMailto(quoteForm);
       } finally {
         submitBtn.disabled = false;
